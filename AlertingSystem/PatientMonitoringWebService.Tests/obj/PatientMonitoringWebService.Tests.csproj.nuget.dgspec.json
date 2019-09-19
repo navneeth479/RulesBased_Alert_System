@@ -1,0 +1,281 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PatientMonitoringWebService.Tests\\PatientMonitoringWebService.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj",
+        "projectName": "DataModelsLib",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepoInterfaceLib\\ICUDBMySQLRepoInterfaceLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepoInterfaceLib\\ICUDBMySQLRepoInterfaceLib.csproj",
+        "projectName": "ICUDBMySQLRepoInterfaceLib",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepoInterfaceLib\\ICUDBMySQLRepoInterfaceLib.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepository\\ICUDBMySQLRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepository\\ICUDBMySQLRepository.csproj",
+        "projectName": "ICUDBMySQLRepository",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepository\\ICUDBMySQLRepository.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+              },
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepoInterfaceLib\\ICUDBMySQLRepoInterfaceLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepoInterfaceLib\\ICUDBMySQLRepoInterfaceLib.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PatientMonitoringWebService.Tests\\PatientMonitoringWebService.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PatientMonitoringWebService.Tests\\PatientMonitoringWebService.Tests.csproj",
+        "projectName": "PatientMonitoringWebService.Tests",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PatientMonitoringWebService.Tests\\PatientMonitoringWebService.Tests.csproj",
+        "packagesPath": "C:\\Users\\320066952\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PatientMonitoringWebService.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\320066952\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+              },
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepository\\ICUDBMySQLRepository.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepository\\ICUDBMySQLRepository.csproj"
+              },
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerLib\\PulseCheckerLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerLib\\PulseCheckerLib.csproj"
+              },
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerLib\\Spo2CheckerLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerLib\\Spo2CheckerLib.csproj"
+              },
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj"
+              },
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TemperatureCheckerLib\\TemperatureCheckerLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TemperatureCheckerLib\\TemperatureCheckerLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.8.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.10.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.6.1, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.10.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerInteraceLib\\PulseCheckerInteraceLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerInteraceLib\\PulseCheckerInteraceLib.csproj",
+        "projectName": "PulseCheckerInteraceLib",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerInteraceLib\\PulseCheckerInteraceLib.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerLib\\PulseCheckerLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerLib\\PulseCheckerLib.csproj",
+        "projectName": "PulseCheckerLib",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerLib\\PulseCheckerLib.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+              },
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerInteraceLib\\PulseCheckerInteraceLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerInteraceLib\\PulseCheckerInteraceLib.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerInterfaceLib\\Spo2CheckerInterfaceLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerInterfaceLib\\Spo2CheckerInterfaceLib.csproj",
+        "projectName": "Spo2CheckerInterfaceLib",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerInterfaceLib\\Spo2CheckerInterfaceLib.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerLib\\Spo2CheckerLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerLib\\Spo2CheckerLib.csproj",
+        "projectName": "Spo2CheckerLib",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerLib\\Spo2CheckerLib.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+              },
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerInterfaceLib\\Spo2CheckerInterfaceLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerInterfaceLib\\Spo2CheckerInterfaceLib.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj",
+        "projectName": "TempCheckerInterfaceLib",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TemperatureCheckerLib\\TemperatureCheckerLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TemperatureCheckerLib\\TemperatureCheckerLib.csproj",
+        "projectName": "TemperatureCheckerLib",
+        "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TemperatureCheckerLib\\TemperatureCheckerLib.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+              },
+              "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj": {
+                "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    }
+  }
+}
