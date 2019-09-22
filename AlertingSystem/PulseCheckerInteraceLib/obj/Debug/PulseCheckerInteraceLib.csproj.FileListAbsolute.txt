@@ -8,3 +8,13 @@ C:\Users\320050487\source\repos\CaseStudyPart2\PulseCheckerInteraceLib\obj\Debug
 C:\Users\320050487\source\repos\CaseStudyPart2\PulseCheckerInteraceLib\obj\Debug\PulseCheckerInteraceLib.csproj.CopyComplete
 C:\Users\320050487\source\repos\CaseStudyPart2\PulseCheckerInteraceLib\obj\Debug\PulseCheckerInteraceLib.dll
 C:\Users\320050487\source\repos\CaseStudyPart2\PulseCheckerInteraceLib\obj\Debug\PulseCheckerInteraceLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\bin\Debug\PulseCheckerInteraceLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\bin\Debug\PulseCheckerInteraceLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\bin\Debug\PulseCheckerInteraceLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\bin\Debug\DataModelsLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\bin\Debug\DataModelsLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\obj\Debug\PulseCheckerInteraceLib.csprojAssemblyReference.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\obj\Debug\PulseCheckerInteraceLib.csproj.CoreCompileInputs.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\obj\Debug\PulseCheckerInteraceLib.csproj.CopyComplete
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\obj\Debug\PulseCheckerInteraceLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerInteraceLib\obj\Debug\PulseCheckerInteraceLib.pdb

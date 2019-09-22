@@ -8,3 +8,13 @@ C:\Users\320050487\source\repos\CaseStudyPart2\Spo2CheckerInterfaceLib\obj\Debug
 C:\Users\320050487\source\repos\CaseStudyPart2\Spo2CheckerInterfaceLib\obj\Debug\Spo2CheckerInterfaceLib.csproj.CopyComplete
 C:\Users\320050487\source\repos\CaseStudyPart2\Spo2CheckerInterfaceLib\obj\Debug\Spo2CheckerInterfaceLib.dll
 C:\Users\320050487\source\repos\CaseStudyPart2\Spo2CheckerInterfaceLib\obj\Debug\Spo2CheckerInterfaceLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\bin\Debug\Spo2CheckerInterfaceLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\bin\Debug\Spo2CheckerInterfaceLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\bin\Debug\Spo2CheckerInterfaceLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\bin\Debug\DataModelsLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\bin\Debug\DataModelsLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\obj\Debug\Spo2CheckerInterfaceLib.csprojAssemblyReference.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\obj\Debug\Spo2CheckerInterfaceLib.csproj.CoreCompileInputs.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\obj\Debug\Spo2CheckerInterfaceLib.csproj.CopyComplete
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\obj\Debug\Spo2CheckerInterfaceLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerInterfaceLib\obj\Debug\Spo2CheckerInterfaceLib.pdb

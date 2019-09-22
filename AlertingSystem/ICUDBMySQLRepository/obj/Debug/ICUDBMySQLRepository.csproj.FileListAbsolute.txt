@@ -37,3 +37,16 @@ C:\Users\320066952\CaseStudySOLID\AlertingSystem\ICUDBMySQLRepository\obj\Debug\
 C:\Users\320066952\CaseStudySOLID\AlertingSystem\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.csproj.CopyComplete
 C:\Users\320066952\CaseStudySOLID\AlertingSystem\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.dll
 C:\Users\320066952\CaseStudySOLID\AlertingSystem\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\bin\Debug\ICUDBMySQLRepository.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\bin\Debug\ICUDBMySQLRepository.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\bin\Debug\DataModelsLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\bin\Debug\ICUDBMySQLRepoInterfaceLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\bin\Debug\Newtonsoft.Json.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\bin\Debug\DataModelsLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\bin\Debug\ICUDBMySQLRepoInterfaceLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\bin\Debug\Newtonsoft.Json.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.csprojAssemblyReference.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.csproj.CoreCompileInputs.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.csproj.CopyComplete
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.pdb

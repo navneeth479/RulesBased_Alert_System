@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("graphics/discharge.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("graphics/exit.png")]
 
 

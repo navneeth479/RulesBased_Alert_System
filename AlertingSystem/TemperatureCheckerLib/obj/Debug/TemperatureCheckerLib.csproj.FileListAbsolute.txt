@@ -11,3 +11,16 @@ C:\Users\320050487\source\repos\CaseStudyPart2\TemperatureCheckerLib\obj\Debug\T
 C:\Users\320050487\source\repos\CaseStudyPart2\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.csproj.CopyComplete
 C:\Users\320050487\source\repos\CaseStudyPart2\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.dll
 C:\Users\320050487\source\repos\CaseStudyPart2\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\TemperatureCheckerLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\TemperatureCheckerLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\TemperatureCheckerLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\DataModelsLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\TempCheckerInterfaceLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\DataModelsLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\TempCheckerInterfaceLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\TempCheckerInterfaceLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.csprojAssemblyReference.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.csproj.CoreCompileInputs.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.csproj.CopyComplete
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.pdb

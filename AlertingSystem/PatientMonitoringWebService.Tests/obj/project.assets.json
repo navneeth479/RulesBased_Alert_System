@@ -6110,23 +6110,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\320066952\\.nuget\\packages\\": {},
+    "C:\\Users\\320050834\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PatientMonitoringWebService.Tests\\PatientMonitoringWebService.Tests.csproj",
+      "projectUniqueName": "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\PatientMonitoringWebService.Tests\\PatientMonitoringWebService.Tests.csproj",
       "projectName": "PatientMonitoringWebService.Tests",
-      "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PatientMonitoringWebService.Tests\\PatientMonitoringWebService.Tests.csproj",
-      "packagesPath": "C:\\Users\\320066952\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PatientMonitoringWebService.Tests\\obj\\",
+      "projectPath": "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\PatientMonitoringWebService.Tests\\PatientMonitoringWebService.Tests.csproj",
+      "packagesPath": "C:\\Users\\320050834\\.nuget\\packages\\",
+      "outputPath": "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\PatientMonitoringWebService.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\320066952\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\320050834\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6139,23 +6139,23 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
-              "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
+            "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj": {
+              "projectPath": "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\DataModelsLib\\DataModelsLib.csproj"
             },
-            "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepository\\ICUDBMySQLRepository.csproj": {
-              "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\ICUDBMySQLRepository\\ICUDBMySQLRepository.csproj"
+            "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\ICUDBMySQLRepository\\ICUDBMySQLRepository.csproj": {
+              "projectPath": "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\ICUDBMySQLRepository\\ICUDBMySQLRepository.csproj"
             },
-            "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerLib\\PulseCheckerLib.csproj": {
-              "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\PulseCheckerLib\\PulseCheckerLib.csproj"
+            "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\PulseCheckerLib\\PulseCheckerLib.csproj": {
+              "projectPath": "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\PulseCheckerLib\\PulseCheckerLib.csproj"
             },
-            "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerLib\\Spo2CheckerLib.csproj": {
-              "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\Spo2CheckerLib\\Spo2CheckerLib.csproj"
+            "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\Spo2CheckerLib\\Spo2CheckerLib.csproj": {
+              "projectPath": "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\Spo2CheckerLib\\Spo2CheckerLib.csproj"
             },
-            "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj": {
-              "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj"
+            "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj": {
+              "projectPath": "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\TempCheckerInterfaceLib\\TempCheckerInterfaceLib.csproj"
             },
-            "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TemperatureCheckerLib\\TemperatureCheckerLib.csproj": {
-              "projectPath": "C:\\Users\\320066952\\CaseStudySOLID\\AlertingSystem\\TemperatureCheckerLib\\TemperatureCheckerLib.csproj"
+            "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\TemperatureCheckerLib\\TemperatureCheckerLib.csproj": {
+              "projectPath": "C:\\Bootcamp\\Phase2_RulesBased\\AlertingSystem\\TemperatureCheckerLib\\TemperatureCheckerLib.csproj"
             }
           }
         }
