@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using ICUDBMySQLRepoInterfaceLib;
 using DataModelsLib;
+using PatientsDBAccess;
 using Spo2CheckerInterfaceLib;
 using PulseCheckerInteraceLib;
 using TempCheckerInterfaceLib;
@@ -63,6 +64,56 @@ namespace CaseStudyPart2.Controllers
             catch (Exception ex)
             { return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex); }
         }
+
+        [Route("api/NurseStation/GetSpecificPatient/{id}")]
+        [HttpGet]
+        public HttpResponseMessage GetSpecificPatient(string id)
+        {
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+
+            try
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, _db.GetSpecificPatient(id));
+            }
+
+
+
+            catch (Exception ex)
+            { return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex); }
+        }
+
+        [Route("api/NurseStation/register")]
+        [HttpPost]//Adding customer details
+
+        public HttpResponseMessage Post([FromBody] ICUStatu registerpatient)
+
+        {
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+
+            var entity = _db.AddPatient(registerpatient);
+
+            if (entity == null)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Patient not admitted ");
+            }
+            else
+            {
+
+                return Request.CreateResponse(HttpStatusCode.OK, "Patient admitted  ");
+
+            }
+        }
+
+        [Route("api/NurseStation/UpdateVitals/{id}")]
+        [HttpPut]
+        public void UpdateVitals(string id, Patient vitals)
+        {
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+
+            _db.UpdateVitals(id, vitals);
+        }
+
+
 
     }
 }

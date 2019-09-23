@@ -11,17 +11,19 @@ namespace AlertingSystem_LoginPage.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PatientId { get; set; }
-        public DateTime PatientDob { get; set; }
+        public string PatientDob { get; set; }
         public int PatientAge { get; set; }
-        public Gender PatientGender { get; set; }
+        public string PatientGender { get; set; }
         public float PatientHeight { get; set; }
         public float PatientWeight { get; set; }
         public string DoctorAssigned { get; set; }
         public string ReasonAdmitted { get; set; }
-        public int BedNum { get; set; }
-        public DateTime AdmissionDate { get; set; }
+        public int bedNo { get; set; }
+        public string AdmissionDate { get; set; }
         public string OtherMedications { get; set; }
-        public Vitals PatientVitals { get; set; }
         public string PatientStatus { get; set; }
+        public int SPO2 { get; set; }
+        public int PulseRate { get; set; }
+        public int Temperature { get; set; }
     }
 }

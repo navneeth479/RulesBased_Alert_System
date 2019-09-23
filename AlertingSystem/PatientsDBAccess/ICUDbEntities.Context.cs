@@ -13,10 +13,10 @@ namespace PatientsDBAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ICUDBEntities : DbContext
+    public partial class ICUDBEntities1 : DbContext
     {
-        public ICUDBEntities()
-            : base("name=ICUDBEntities")
+        public ICUDBEntities1()
+            : base("name=ICUDBEntities1")
         {
         }
     

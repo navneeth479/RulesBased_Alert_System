@@ -9,28 +9,29 @@ using System.Windows.Data;
 
 namespace AlertingSystem_LoginPage.ViewModels
 {
-    class GenderConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            var ParameterString = parameter as string;
-            if (ParameterString == null)
-                return DependencyProperty.UnsetValue;
+    //class GenderConverter : IValueConverter
+    //{
+    //    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    //    {
+    //        var ParameterString = parameter as string;
+    //        if (ParameterString == null)
+    //            return DependencyProperty.UnsetValue;
 
-            if (Enum.IsDefined(value.GetType(), value) == false)
-                return DependencyProperty.UnsetValue;
+    //        if (Enum.IsDefined(value.GetType(), value) == false)
+    //            return DependencyProperty.UnsetValue;
 
-            object paramvalue = Enum.Parse(value.GetType(), ParameterString);
-            return paramvalue.Equals(value);
-        }
+    //        object paramvalue = Enum.Parse(value.GetType(), ParameterString);
+    //        return paramvalue.Equals(value);
+    //    }
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            var ParameterString = parameter as string;
-            if (ParameterString == null)
-                return DependencyProperty.UnsetValue;
+    //    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    //    {
+    //        var ParameterString = parameter as string;
+    //        if (ParameterString == null)
+    //            return DependencyProperty.UnsetValue;
 
-            return Enum.Parse(targetType, ParameterString);
-        }
-    }
+    //        return Enum.Parse(targetType, ParameterString);
+    //    }
+
+    //}
 }

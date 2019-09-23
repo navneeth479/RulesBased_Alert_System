@@ -4,60 +4,60 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ICUDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="AlarmingSystemDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ICUStatus">
           <Key>
             <PropertyRef Name="PatientId" />
           </Key>
           <Property Name="PatientId" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PatientDo" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PatientAge" Type="int" Nullable="false" />
-          <Property Name="PatientGender" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PatientHeight" Type="float" Nullable="false" />
-          <Property Name="PatientWeight" Type="float" Nullable="false" />
-          <Property Name="DoctorAssigned" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ReasonAdmitted" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="AdmissionDate" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="OtherMedications" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="SPO2" Type="int" Nullable="false" />
-          <Property Name="PulseRate" Type="int" Nullable="false" />
-          <Property Name="Temperature" Type="int" Nullable="false" />
-          <Property Name="PatientStatus" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="PatientDob" Type="varchar" MaxLength="50" />
+          <Property Name="PatientAge" Type="int" />
+          <Property Name="PatientGender" Type="varchar" MaxLength="50" />
+          <Property Name="PatientHeight" Type="float" />
+          <Property Name="PatientWeight" Type="float" />
+          <Property Name="DoctorAssigned" Type="varchar" MaxLength="50" />
+          <Property Name="ReasonAdmitted" Type="varchar" MaxLength="50" />
+          <Property Name="AdmissionDate" Type="varchar" MaxLength="50" />
+          <Property Name="OtherMedications" Type="varchar" MaxLength="50" />
+          <Property Name="SPO2" Type="int" />
+          <Property Name="PulseRate" Type="int" />
+          <Property Name="Temperature" Type="int" />
+          <Property Name="PatientStatus" Type="varchar" MaxLength="50" />
           <Property Name="bedNo" Type="int" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="ICUDBModelStoreContainer">
+        <EntityContainer Name="AlarmingSystemDBModelStoreContainer">
           <EntitySet Name="ICUStatus" EntityType="Self.ICUStatus" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ICUDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="AlarmingSystemDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="ICUStatu">
           <Key>
             <PropertyRef Name="PatientId" />
           </Key>
           <Property Name="PatientId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PatientDo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PatientAge" Type="Int32" Nullable="false" />
-          <Property Name="PatientGender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PatientHeight" Type="Double" Nullable="false" />
-          <Property Name="PatientWeight" Type="Double" Nullable="false" />
-          <Property Name="DoctorAssigned" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ReasonAdmitted" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="AdmissionDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="OtherMedications" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SPO2" Type="Int32" Nullable="false" />
-          <Property Name="PulseRate" Type="Int32" Nullable="false" />
-          <Property Name="Temperature" Type="Int32" Nullable="false" />
-          <Property Name="PatientStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PatientDob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PatientAge" Type="Int32" />
+          <Property Name="PatientGender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PatientHeight" Type="Double" />
+          <Property Name="PatientWeight" Type="Double" />
+          <Property Name="DoctorAssigned" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReasonAdmitted" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdmissionDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OtherMedications" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SPO2" Type="Int32" />
+          <Property Name="PulseRate" Type="Int32" />
+          <Property Name="Temperature" Type="Int32" />
+          <Property Name="PatientStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="bedNo" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="ICUDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ICUDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ICUStatus" EntityType="Self.ICUStatu" />
         </EntityContainer>
       </Schema>
@@ -65,14 +65,14 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ICUDBModelStoreContainer" CdmEntityContainer="ICUDBEntities">
+        <EntityContainerMapping StorageEntityContainer="AlarmingSystemDBModelStoreContainer" CdmEntityContainer="ICUDBEntities1">
           <EntitySetMapping Name="ICUStatus">
-            <EntityTypeMapping TypeName="ICUDBModel.ICUStatu">
+            <EntityTypeMapping TypeName="AlarmingSystemDBModel.ICUStatu">
               <MappingFragment StoreEntitySet="ICUStatus">
                 <ScalarProperty Name="PatientId" ColumnName="PatientId" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="PatientDo" ColumnName="PatientDo" />
+                <ScalarProperty Name="PatientDob" ColumnName="PatientDob" />
                 <ScalarProperty Name="PatientAge" ColumnName="PatientAge" />
                 <ScalarProperty Name="PatientGender" ColumnName="PatientGender" />
                 <ScalarProperty Name="PatientHeight" ColumnName="PatientHeight" />

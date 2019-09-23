@@ -16,34 +16,32 @@ namespace ICUDBMySQLRepository
     {
         public IcuDbMySqlRepo()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ICUDB;
-               Integrated Security=True;MultipleActiveResultSets=true");
-            con.Open();
-            SqlCommand cmd1 = new SqlCommand("SELECT * FROM Beds", con);
-            var reader = cmd1.ExecuteReader();
-            Dictionary<int, bool> occupied = new Dictionary<int, bool>();
+            //SqlConnection con = new SqlConnection(@"Data Source=YY175268\SQLEXPRESS;Initial Catalog=AlarmingSystemDB;Integrated Security=True");
+            //con.Open();
+            //SqlCommand cmd1 = new SqlCommand("SELECT * FROM Beds", con);
+            //var reader = cmd1.ExecuteReader();
+            //Dictionary<int, bool> occupied = new Dictionary<int, bool>();
 
-            while (reader.Read())
-            {
-                if ((string)reader[1] == "Y")
-                {
-                    occupied.Add((int)reader[0], true);
-                }
-                else
-                {
-                    occupied.Add((int)reader[0], false);
-                }
+            //while (reader.Read())
+            //{
+            //    if ((string)reader[1] == "Y")
+            //    {
+            //        occupied.Add((int)reader[0], true);
+            //    }
+            //    else
+            //    {
+            //        occupied.Add((int)reader[0], false);
+            //    }
 
 
-            }
+            //}
 
-            ICU.BedOccupancy = occupied;
+            //ICU.BedOccupancy = occupied;
         }
         public void AdmitPatient(string id,int bedno)
         {
            
-            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ICUDB;
-               Integrated Security=True;MultipleActiveResultSets=true");
+            SqlConnection con = new SqlConnection(@"Data Source=YY175268\SQLEXPRESS;Initial Catalog=AlarmingSystemDB;Integrated Security=True");
             con.Open();
 
             SqlCommand cmd2 = new SqlCommand("SELECT * FROM ICUSTATE", con);
@@ -112,7 +110,7 @@ namespace ICUDBMySQLRepository
                     return;
                 ICU.BedOccupancy[bedno] = false;
                 SqlConnection con =
-                    new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ICUDB;Integrated Security=True");
+                    new SqlConnection(@"Data Source=YY175268\SQLEXPRESS;Initial Catalog=AlarmingSystemDB;Integrated Security=True");
                 string query = @"UPDATE ICUSTATE SET BEDSOCCUPIED=BEDSOCCUPIED-1 
                             ";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -131,15 +129,14 @@ namespace ICUDBMySQLRepository
         //----------------------------------------------------------------------------------------
         public List<ICUStatu> GetPatient()
         {
-            using (ICUDBEntities entities = new ICUDBEntities())
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
             { return entities.ICUStatus.ToList(); }
         }
         //----------------------------------------------------------------------------------------
 
         public void ReadRecord(ref string id, ref int spo2, ref int pulse, ref double temp)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ICUDB;
-               Integrated Security=True;MultipleActiveResultSets=true");
+            SqlConnection con = new SqlConnection(@"Data Source=YY175268\SQLEXPRESS;Initial Catalog=AlarmingSystemDB;Integrated Security=True");
             con.Open();
             SqlCommand cmd = new SqlCommand($@"SELECT * FROM ICUSTATE WHERE PATIENTID='{id}'", con);
             var reader = cmd.ExecuteReader();
@@ -150,6 +147,36 @@ namespace ICUDBMySQLRepository
             temp = (double)reader[2];
 
 
+        }
+        public void UpdateVitals(string id, Patient vitals)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=AlarmingSystemDB;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd6 = new SqlCommand($@"UPDATE ICUSTATUS SET SPO2='{vitals.Spo2}',PULSERATE='{vitals.PulseRate}',TEMPERATURE='{vitals.Temperature}' WHERE PATIENTID='{id}'", con);
+            cmd6.ExecuteNonQuery();
+            con.Close();
+        }
+        //--------------------------------------------------------------------------------------------------------
+
+        public ICUStatu AddPatient(ICUStatu record)
+        {
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
+            {
+                var entity = entities.ICUStatus.Add(record);
+                entities.SaveChanges();
+                return entity;
+
+            }
+        }
+        public ICUStatu GetSpecificPatient(string id)
+        {
+
+
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
+            {
+                var entity=entities.ICUStatus.Where(e => e.PatientId.ToLower() == id.ToLower());
+                return entity.FirstOrDefault();
+            }
         }
     }
 }

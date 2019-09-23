@@ -10,6 +10,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Net.Http;
+//using NewtonSoft.Json;
+using System.Net.Http.Headers;
+using System.Threading;
+using System.Windows.Controls;
 using AlertingSystem_LoginPage.Models;
 
 namespace AlertingSystem_LoginPage.ViewModels
@@ -19,10 +24,12 @@ namespace AlertingSystem_LoginPage.ViewModels
         private Patient _patient;
         private Patient _selectedPatient;
         private ObservableCollection<Patient> _patients =new ObservableCollection<Patient>();
+        private ObservableCollection<Patient> _newpatients=new ObservableCollection<Patient>();
         private ICommand _submitCommand;
         private ICommand _closeCommand;
         private ICommand _resetCommand;
-        
+        private Client clt = new Client();
+
 
         public Patient SelectedPatient
         {
@@ -102,11 +109,11 @@ namespace AlertingSystem_LoginPage.ViewModels
         {
             Patient=new Patient();
             Patients=new ObservableCollection<Patient>();
-            Patients.CollectionChanged +=new NotifyCollectionChangedEventHandler(Students_CollectionChanged);
-            _patients.Insert(0,new Patient(){FirstName = "John",LastName = "Doe",PatientId = "pat1234",PatientStatus="Active"});
-            _patients.Insert(0,new Patient(){FirstName = "Jane",LastName = "Doe",PatientId = "pat1234",PatientStatus="Alert"});
+            Patients.CollectionChanged +=new NotifyCollectionChangedEventHandler(Patients_CollectionChanged);
+            _patients = clt.GetAllPatients();
+            
         }
-        void Students_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void Patients_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             NotifyPropertyChanged("Patients");
         }
@@ -114,8 +121,12 @@ namespace AlertingSystem_LoginPage.ViewModels
         private void Submit()
         {
             Patient.PatientStatus = "Admitted";
-            Patients.Insert(0,Patient);
-            Patient=new Patient();
+            Patient.SPO2 = 0;
+            Patient.Temperature = 0;
+            Patient.PulseRate = 0;
+            clt.RegisterPatient(Patient);
+            Patients.Insert(0, clt.GetPatient(Patient.PatientId));
+            Patient =new Patient();
         }
 
         private void Reset()

@@ -15,7 +15,7 @@
         <viewmodel:ViewModel x:Key="ViewModel"/>
         <viewmodel:DatetimeToDateConverter x:Key="DateConverter"/>
         <viewmodel:StatusToColorBrushConverter x:Key="StatusConverter"/>
-        <viewmodel:GenderConverter x:Key="GenderConverter"/>
+        
 
         <ControlTemplate x:Key="validationTemplate">
             <DockPanel>
@@ -151,7 +151,7 @@
                                         <TextBlock Foreground="#c9c7c7" Text="{Binding LastName}" TextAlignment="Center" FontSize="25" FontWeight="Heavy"></TextBlock>
 
                                         <TextBlock Text="{Binding PatientId}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Padding="5"/>
-                                        <TextBlock Text="{Binding BedNum}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
+                                        <TextBlock Text="{Binding bedNo}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
                                         <Ellipse HorizontalAlignment="Right" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White}" Width="10" Height="10"/>
                                     </StackPanel>
                                 </Border>
@@ -208,9 +208,9 @@
                                 <ColumnDefinition Width="1*"/>
                                 <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
-                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Male"  Name="MaleRadioButton" VerticalAlignment="Center"  Grid.Column="0" HorizontalAlignment="Left" IsChecked="{Binding Converter={StaticResource GenderConverter},Path=Patient.PatientGender,Mode=TwoWay,ConverterParameter=Male}"/>
-                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Female"  HorizontalAlignment="Left" Name="FemaleRadioButton" VerticalAlignment="Center" Grid.Column="1" IsChecked="{Binding Converter={StaticResource GenderConverter},Path=Patient.PatientGender,Mode=TwoWay,ConverterParameter=Female}" />
-                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Other" Height="16" HorizontalAlignment="Left" Name="OtherRadioButton" VerticalAlignment="Center" Grid.Column="2" IsChecked="{Binding Converter={StaticResource GenderConverter},Path=Patient.PatientGender,Mode=TwoWay,ConverterParameter=Other}"/>
+                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Male"  Name="MaleRadioButton" VerticalAlignment="Center"  Grid.Column="0" HorizontalAlignment="Left" />
+                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Female"  HorizontalAlignment="Left" Name="FemaleRadioButton" VerticalAlignment="Center" Grid.Column="1" />
+                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Other" Height="16" HorizontalAlignment="Left" Name="OtherRadioButton" VerticalAlignment="Center" Grid.Column="2" />
                         </Grid>
                         <Grid Grid.Column="1" Grid.Row="6" Margin="8" Width="250" HorizontalAlignment="Left">
                             <Grid.ColumnDefinitions>
@@ -269,7 +269,7 @@
                                         <TextBlock Foreground="#c9c7c7" Text="{Binding LastName}" TextAlignment="Center" FontSize="25" FontWeight="Heavy"></TextBlock>
 
                                         <TextBlock Text="{Binding PatientId}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Padding="5"/>
-                                        <TextBlock Text="{Binding BedNum}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
+                                        <TextBlock Text="{Binding bedNo}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
                                         <Ellipse HorizontalAlignment="Right" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White}" Width="10" Height="10"/>
                                     </StackPanel>
                                 </Border>
@@ -338,7 +338,7 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Foreground="#c9c7c7" TextAlignment="Left" Text="ICU Bed Alloted :" FontSize="20" Padding="10" />
-                                <TextBlock Padding="10" Grid.Column="1"  Foreground="#c9c7c7" TextAlignment="Left" Text="{Binding BedNum,FallbackValue=BedNum}" FontSize="20" />
+                                <TextBlock Padding="10" Grid.Column="1"  Foreground="#c9c7c7" TextAlignment="Left" Text="{Binding bedNo,FallbackValue=BedNum}" FontSize="20" />
                             </Grid>
                             <Line
                                 X1="20" Y1="30"
@@ -557,7 +557,7 @@
                             <RowDefinition Height="300"/>
                             <RowDefinition Height="290"/>
                         </Grid.RowDefinitions>
-                        <StackPanel Grid.Column="0" Grid.Row="0">
+                        <StackPanel Grid.Column="0" Grid.Row="0" x:Name="BedPanel01">
                             <Label HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 01</Label>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed1" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>

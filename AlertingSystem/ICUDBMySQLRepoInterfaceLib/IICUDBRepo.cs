@@ -14,6 +14,9 @@ namespace ICUDBMySQLRepoInterfaceLib
         void AdmitPatient(string id,int bedno);
         void DischargePatient(string id,int bedno);
         List<ICUStatu> GetPatient();
+        ICUStatu GetSpecificPatient(string id);
+        ICUStatu AddPatient(ICUStatu record);
+        void UpdateVitals(string id, Patient vitals);
 
 
     }

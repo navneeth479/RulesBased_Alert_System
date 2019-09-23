@@ -47,3 +47,5 @@ C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\bin\De
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\obj\Debug\AlertingSystem_LoginPage.csproj.CopyComplete
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\obj\Debug\AlertingSystem_LoginPage.csprojAssemblyReference.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\bin\Debug\Newtonsoft.Json.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\bin\Debug\Newtonsoft.Json.xml

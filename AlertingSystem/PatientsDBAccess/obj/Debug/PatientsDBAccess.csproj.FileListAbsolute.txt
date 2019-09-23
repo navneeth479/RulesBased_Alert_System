@@ -10,3 +10,15 @@ C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAcc
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.csproj.CopyComplete
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.dll
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\PatientsDBAccess.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\PatientsDBAccess.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\PatientsDBAccess.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\EntityFramework.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\EntityFramework.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.csprojAssemblyReference.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.csproj.CoreCompileInputs.cache
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.csproj.CopyComplete
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.pdb

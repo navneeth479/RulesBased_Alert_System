@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ICUDBModelStoreContainer" CdmEntityContainer="ICUDBEntities">
+  <EntityContainerMapping StorageEntityContainer="AlarmingSystemDBModelStoreContainer" CdmEntityContainer="ICUDBEntities1">
     <EntitySetMapping Name="ICUStatus">
-      <EntityTypeMapping TypeName="ICUDBModel.ICUStatu">
+      <EntityTypeMapping TypeName="AlarmingSystemDBModel.ICUStatu">
         <MappingFragment StoreEntitySet="ICUStatus">
           <ScalarProperty Name="PatientId" ColumnName="PatientId" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="PatientDo" ColumnName="PatientDo" />
+          <ScalarProperty Name="PatientDob" ColumnName="PatientDob" />
           <ScalarProperty Name="PatientAge" ColumnName="PatientAge" />
           <ScalarProperty Name="PatientGender" ColumnName="PatientGender" />
           <ScalarProperty Name="PatientHeight" ColumnName="PatientHeight" />

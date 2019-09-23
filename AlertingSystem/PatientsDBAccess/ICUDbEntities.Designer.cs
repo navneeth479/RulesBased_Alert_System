@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUDbEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUDBEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

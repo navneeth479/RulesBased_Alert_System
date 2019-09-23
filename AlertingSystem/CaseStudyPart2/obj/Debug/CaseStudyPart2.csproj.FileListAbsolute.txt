@@ -1303,3 +1303,13 @@ C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\CaseStudyPart
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\DataModelsLib.dll.config
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\ICUDBMySQLRepoInterfaceLib.dll.config
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\EntityFramework.SqlServer.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\EntityFramework.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\EntityFramework.SqlServer.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\PatientsDBAccess.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\DataModelsLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\ICUDBMySQLRepoInterfaceLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\ICUDBMySQLRepository.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\PatientsDBAccess.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\PatientsDBAccess.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\EntityFramework.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\CaseStudyPart2\bin\EntityFramework.SqlServer.xml

@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="ICUDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="AlarmingSystemDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ICUStatus">
     <Key>
       <PropertyRef Name="PatientId" />
     </Key>
     <Property Name="PatientId" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="PatientDo" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="PatientAge" Type="int" Nullable="false" />
-    <Property Name="PatientGender" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="PatientHeight" Type="float" Nullable="false" />
-    <Property Name="PatientWeight" Type="float" Nullable="false" />
-    <Property Name="DoctorAssigned" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ReasonAdmitted" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="AdmissionDate" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="OtherMedications" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="SPO2" Type="int" Nullable="false" />
-    <Property Name="PulseRate" Type="int" Nullable="false" />
-    <Property Name="Temperature" Type="int" Nullable="false" />
-    <Property Name="PatientStatus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="PatientDob" Type="varchar" MaxLength="50" />
+    <Property Name="PatientAge" Type="int" />
+    <Property Name="PatientGender" Type="varchar" MaxLength="50" />
+    <Property Name="PatientHeight" Type="float" />
+    <Property Name="PatientWeight" Type="float" />
+    <Property Name="DoctorAssigned" Type="varchar" MaxLength="50" />
+    <Property Name="ReasonAdmitted" Type="varchar" MaxLength="50" />
+    <Property Name="AdmissionDate" Type="varchar" MaxLength="50" />
+    <Property Name="OtherMedications" Type="varchar" MaxLength="50" />
+    <Property Name="SPO2" Type="int" />
+    <Property Name="PulseRate" Type="int" />
+    <Property Name="Temperature" Type="int" />
+    <Property Name="PatientStatus" Type="varchar" MaxLength="50" />
     <Property Name="bedNo" Type="int" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="ICUDBModelStoreContainer">
+  <EntityContainer Name="AlarmingSystemDBModelStoreContainer">
     <EntitySet Name="ICUStatus" EntityType="Self.ICUStatus" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
