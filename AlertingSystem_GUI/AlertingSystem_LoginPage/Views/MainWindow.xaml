@@ -401,7 +401,7 @@
                             </Grid.RowDefinitions>
                         
                         <Border Grid.Row="0" Height="210" Width="500"  VerticalAlignment="Top" Margin="10" BorderThickness="4" BorderBrush="#c9c7c7">
-                            <StackPanel>
+                            <StackPanel DataContext="{Binding Source=PatientVitals}">
                                 <TextBlock Padding="15,5,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Left" Text="Current Vitals :" FontSize="30" MaxHeight="100" />
                                 <Grid HorizontalAlignment="Center">
                                     <Grid.ColumnDefinitions>
@@ -410,7 +410,7 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="SPO2 Level :" FontSize="25" Padding="0,20,0,0" />
-                                        <TextBlock Padding="10,20,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding PatientVitals.spo2,FallbackValue=Vitals.spo2}" FontSize="25" MaxHeight="100" />
+                                        <TextBlock Padding="10,20,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding spo2,FallbackValue=Vitals.spo2}" FontSize="25" MaxHeight="100" />
                                 </Grid>
                                 <Grid HorizontalAlignment="Center">
                                     <Grid.ColumnDefinitions>
@@ -419,7 +419,7 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="Pulse Rate :" FontSize="25" Padding="0,10,0,0" />
-                                        <TextBlock Padding="10,10,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding PatientVitals.pulse,FallbackValue=Vitals.pulse}" FontSize="25" MaxHeight="100" />
+                                        <TextBlock Padding="10,10,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding pulse,FallbackValue=Vitals.pulse}" FontSize="25" MaxHeight="100" />
                                 </Grid>
                                 <Grid HorizontalAlignment="Center">
                                     <Grid.ColumnDefinitions>
@@ -428,7 +428,7 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="Temperature :" FontSize="25" Padding="0,10,0,0" />
-                                        <TextBlock Padding="10,10,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding PatientVitals.temp,FallbackValue=Vitals.temp}" FontSize="25" MaxHeight="100" />
+                                        <TextBlock Padding="10,10,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding temp,FallbackValue=Vitals.temp}" FontSize="25" MaxHeight="100" />
                                 </Grid>
 
 
@@ -544,7 +544,7 @@
                     </ListView>
                     <Label Margin="0,20,0,0"  FontSize="25" FontWeight="Bold" HorizontalAlignment="Center">ICU ward Layout</Label>
 
-                    <Grid Margin="20,30,20,20"  HorizontalAlignment="Stretch" Name="grid1" ShowGridLines="True" Width="Auto" Height="Auto" >
+                    <Grid Margin="20,30,20,20"  HorizontalAlignment="Stretch" Name="grid1" ShowGridLines="True" Width="Auto" Height="Auto" DataContext="{Binding Source=Patient}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>

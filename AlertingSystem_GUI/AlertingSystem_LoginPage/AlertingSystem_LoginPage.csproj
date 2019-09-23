@@ -67,7 +67,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Patient.cs" />
-    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\Vitals.cs" />
     <Compile Include="ViewModels\DatetimeToDateConverter.cs" />
     <Compile Include="ViewModels\GenderConverter.cs" />
