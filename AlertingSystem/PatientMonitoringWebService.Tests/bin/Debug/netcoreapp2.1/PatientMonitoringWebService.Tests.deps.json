@@ -1088,7 +1088,8 @@
       },
       "ICUDBMySQLRepoInterfaceLib/1.0.0": {
         "dependencies": {
-          "DataModelsLib": "1.0.0"
+          "DataModelsLib": "1.0.0",
+          "PatientsDBAccess": "1.0.0"
         },
         "runtime": {
           "ICUDBMySQLRepoInterfaceLib.dll": {}
@@ -1097,10 +1098,17 @@
       "ICUDBMySQLRepository/1.0.0": {
         "dependencies": {
           "DataModelsLib": "1.0.0",
-          "ICUDBMySQLRepoInterfaceLib": "1.0.0"
+          "ICUDBMySQLRepoInterfaceLib": "1.0.0",
+          "PatientsDBAccess": "1.0.0",
+          "EntityFramework": "6.0.0.0"
         },
         "runtime": {
           "ICUDBMySQLRepository.dll": {}
+        }
+      },
+      "PatientsDBAccess/1.0.0": {
+        "runtime": {
+          "PatientsDBAccess.dll": {}
         }
       },
       "PulseCheckerInteraceLib/1.0.0": {
@@ -1152,6 +1160,14 @@
         },
         "runtime": {
           "TemperatureCheckerLib.dll": {}
+        }
+      },
+      "EntityFramework.Reference/6.0.0.0": {
+        "runtime": {
+          "EntityFramework.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.61023.0"
+          }
         }
       }
     }
@@ -1716,6 +1732,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "PatientsDBAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "PulseCheckerInteraceLib/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1743,6 +1764,11 @@
     },
     "TemperatureCheckerLib/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntityFramework.Reference/6.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

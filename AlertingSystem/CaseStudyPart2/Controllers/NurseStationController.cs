@@ -46,8 +46,23 @@ namespace CaseStudyPart2.Controllers
             
             _db.DischargePatient(id,bedno);
         }
-        
 
+        [Route("api/NurseStation/GetPatient")]
+        [HttpGet]
+        public HttpResponseMessage GetPatient()
+        {
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+
+            try
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, _db.GetPatient());
+            }
+
+
+
+            catch (Exception ex)
+            { return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex); }
+        }
 
     }
 }

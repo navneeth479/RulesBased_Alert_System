@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using DataModelsLib;
 using ICUDBMySQLRepoInterfaceLib;
 using Newtonsoft.Json;
+using PatientsDBAccess;
 
 namespace ICUDBMySQLRepository
 {
@@ -127,7 +128,13 @@ namespace ICUDBMySQLRepository
                 cmd3.ExecuteNonQuery();
             
         }
-
+        //----------------------------------------------------------------------------------------
+        public List<ICUStatu> GetPatient()
+        {
+            using (ICUDBEntities entities = new ICUDBEntities())
+            { return entities.ICUStatus.ToList(); }
+        }
+        //----------------------------------------------------------------------------------------
 
         public void ReadRecord(ref string id, ref int spo2, ref int pulse, ref double temp)
         {

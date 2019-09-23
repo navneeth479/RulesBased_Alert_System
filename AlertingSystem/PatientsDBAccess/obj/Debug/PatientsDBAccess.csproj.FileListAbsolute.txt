@@ -1,0 +1,12 @@
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\PatientsDBAccess.dll.config
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\PatientsDBAccess.dll
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\PatientsDBAccess.pdb
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\EntityFramework.dll
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\EntityFramework.xml
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.csprojAssemblyReference.cache
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.csproj.CoreCompileInputs.cache
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.csproj.CopyComplete
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.dll
+C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\obj\Debug\PatientsDBAccess.pdb

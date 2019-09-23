@@ -32,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		PatientData.json = PatientData.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientsDBAccess", "PatientsDBAccess\PatientsDBAccess.csproj", "{B374CEDC-A1A7-4C33-AEC2-31072B750187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,10 @@ Global
 		{696171E6-97A2-42BF-B1F7-49520F3442D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{696171E6-97A2-42BF-B1F7-49520F3442D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{696171E6-97A2-42BF-B1F7-49520F3442D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B374CEDC-A1A7-4C33-AEC2-31072B750187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B374CEDC-A1A7-4C33-AEC2-31072B750187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B374CEDC-A1A7-4C33-AEC2-31072B750187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B374CEDC-A1A7-4C33-AEC2-31072B750187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
