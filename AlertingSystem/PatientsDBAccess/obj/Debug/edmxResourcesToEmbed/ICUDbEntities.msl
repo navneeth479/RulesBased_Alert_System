@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ICUDBModelStoreContainer" CdmEntityContainer="ICUDBEntities">
+    <EntitySetMapping Name="ICUStatus">
+      <EntityTypeMapping TypeName="ICUDBModel.ICUStatu">
+        <MappingFragment StoreEntitySet="ICUStatus">
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="PatientDo" ColumnName="PatientDo" />
+          <ScalarProperty Name="PatientAge" ColumnName="PatientAge" />
+          <ScalarProperty Name="PatientGender" ColumnName="PatientGender" />
+          <ScalarProperty Name="PatientHeight" ColumnName="PatientHeight" />
+          <ScalarProperty Name="PatientWeight" ColumnName="PatientWeight" />
+          <ScalarProperty Name="DoctorAssigned" ColumnName="DoctorAssigned" />
+          <ScalarProperty Name="ReasonAdmitted" ColumnName="ReasonAdmitted" />
+          <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />
+          <ScalarProperty Name="OtherMedications" ColumnName="OtherMedications" />
+          <ScalarProperty Name="SPO2" ColumnName="SPO2" />
+          <ScalarProperty Name="PulseRate" ColumnName="PulseRate" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="PatientStatus" ColumnName="PatientStatus" />
+          <ScalarProperty Name="bedNo" ColumnName="bedNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
