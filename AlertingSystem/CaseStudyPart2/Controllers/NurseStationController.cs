@@ -82,6 +82,39 @@ namespace CaseStudyPart2.Controllers
             { return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex); }
         }
 
+        [Route("api/NurseStation/GetPatientBasedOnBed/{id}")]
+        [HttpGet]
+        public HttpResponseMessage GetPatientBasedOnBed(int id)
+        {
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+
+            try
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, _db.GetPatientBasedOnBed(id));
+            }
+
+
+
+            catch (Exception ex)
+            { return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex); }
+        }
+        [Route("api/NurseStation/UpdatePatientRecord/{id}")]
+        [HttpPut]
+        public HttpResponseMessage Put(string id, [FromBody] ICUStatu patientstatus)
+        {
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            var entity = _db.UpdatePatientStatus(id, patientstatus);
+
+            if (entity == null)
+            { return Request.CreateErrorResponse(HttpStatusCode.NotFound, "patient with id" + id + "Is not found"); }
+
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, "models details successfully updated ");
+            }
+
+        }
+
         [Route("api/NurseStation/register")]
         [HttpPost]//Adding customer details
 

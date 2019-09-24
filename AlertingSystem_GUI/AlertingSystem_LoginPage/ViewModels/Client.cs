@@ -32,6 +32,20 @@ namespace AlertingSystem_LoginPage.ViewModels
             return output;
         }
 
+        public Patient GetPatientBasedOnBed(int bed)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/GetPatientBasedOnBed/");
+
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var response = client.GetAsync(bed.ToString()).Result;
+            string s = response.Content.ReadAsStringAsync().Result;
+            var output = JsonConvert.DeserializeObject<Patient>(s);
+            return output;
+
+        }
         public Patient GetPatient(string id)
         {
             HttpClient client = new HttpClient();
@@ -60,6 +74,21 @@ namespace AlertingSystem_LoginPage.ViewModels
                return;
             }
             
+        }
+
+        public void UpdatePatient(string id, Patient patient)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/UpdatePatientRecord/");
+            var myContent = JsonConvert.SerializeObject(patient);
+            var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
+            var byteContent = new ByteArrayContent(buffer);
+            byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            var result = client.PutAsync(id.ToString(), byteContent).Result;
+            if (result.IsSuccessStatusCode)
+            {
+                return;
+            }
 
         }
     }

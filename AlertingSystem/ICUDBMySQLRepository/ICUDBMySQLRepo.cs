@@ -130,7 +130,7 @@ namespace ICUDBMySQLRepository
         public List<ICUStatu> GetPatient()
         {
             using (ICUDBEntities1 entities = new ICUDBEntities1())
-            { return entities.ICUStatus.ToList(); }
+            { return entities.ICUStatus.Where(e=>e.PatientStatus.ToLower()!="discharged").ToList(); }
         }
         //----------------------------------------------------------------------------------------
 
@@ -157,6 +157,44 @@ namespace ICUDBMySQLRepository
             con.Close();
         }
         //--------------------------------------------------------------------------------------------------------
+
+        public ICUStatu GetPatientBasedOnBed(int id)
+        {
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
+            {
+                var entity = entities.ICUStatus.Where(e => e.bedNo == id);
+                return entity.FirstOrDefault();
+            }
+        }
+        public ICUStatu UpdatePatientStatus(string id, ICUStatu updatestatus)
+        {
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
+            {
+
+                var entity = entities.ICUStatus.FirstOrDefault(e => e.PatientId == id);
+                entity.FirstName = updatestatus.FirstName;
+                entity.LastName = updatestatus.LastName;
+                entity.AdmissionDate = updatestatus.AdmissionDate;
+                entity.DoctorAssigned = updatestatus.DoctorAssigned;
+                entity.PatientAge = updatestatus.PatientAge;
+                entity.PatientGender = updatestatus.PatientGender;
+                entity.PatientHeight = updatestatus.PatientHeight;
+                entity.PatientWeight = updatestatus.PatientWeight;
+                entity.PatientStatus = updatestatus.PatientStatus;
+                entity.SPO2 = updatestatus.SPO2;
+                entity.Temperature = updatestatus.Temperature;
+                entity.PulseRate = updatestatus.PulseRate;
+                entity.bedNo = updatestatus.bedNo;
+                entity.OtherMedications = updatestatus.OtherMedications;
+                entity.PatientDob = updatestatus.PatientDob;
+
+                entities.SaveChanges();
+
+                return entity;
+
+
+            }
+        }
 
         public ICUStatu AddPatient(ICUStatu record)
         {

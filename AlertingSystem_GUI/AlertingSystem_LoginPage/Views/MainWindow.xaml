@@ -15,8 +15,19 @@
         <viewmodel:ViewModel x:Key="ViewModel"/>
         <viewmodel:DatetimeToDateConverter x:Key="DateConverter"/>
         <viewmodel:StatusToColorBrushConverter x:Key="StatusConverter"/>
-        
+        <viewmodel:GenderConverter x:Key="GenderConverter"/>
 
+        <Style TargetType="Grid" x:Key="BedVitalGrids">
+            
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver"  Value="False">
+                    <Setter Property="Visibility" Value="Visible" />
+                </Trigger>
+                <Trigger Property="IsMouseOver"  Value="True">
+                    <Setter Property="Visibility" Value="Hidden" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <ControlTemplate x:Key="validationTemplate">
             <DockPanel>
                 <TextBlock Foreground="Red" FontSize="25" Text="*" DockPanel.Dock="Right">
@@ -137,7 +148,7 @@
                 </TabItem.Header>
 
                 <StackPanel Background="#1f1f1f" DataContext="{Binding Source={StaticResource ViewModel}}">
-                    <ListView Name="PatientList1" Height="150" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedItem="{Binding SelectedPatient,Mode=TwoWay}" SelectedIndex="0">
+                    <ListView Name="PatientList1" Height="160" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedItem="{Binding SelectedPatient,Mode=TwoWay}" SelectedIndex="0">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Background="Transparent" Orientation="Horizontal" />
@@ -208,9 +219,9 @@
                                 <ColumnDefinition Width="1*"/>
                                 <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
-                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Male"  Name="MaleRadioButton" VerticalAlignment="Center"  Grid.Column="0" HorizontalAlignment="Left" />
-                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Female"  HorizontalAlignment="Left" Name="FemaleRadioButton" VerticalAlignment="Center" Grid.Column="1" />
-                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Other" Height="16" HorizontalAlignment="Left" Name="OtherRadioButton" VerticalAlignment="Center" Grid.Column="2" />
+                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Male"  Name="MaleRadioButton" VerticalAlignment="Center"  Grid.Column="0" HorizontalAlignment="Left"  IsChecked="{Binding Patient.PatientGender,Converter={StaticResource GenderConverter},ConverterParameter=Male}"/>
+                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Female"  HorizontalAlignment="Left" Name="FemaleRadioButton" VerticalAlignment="Center" Grid.Column="1" IsChecked="{Binding Patient.PatientGender,Converter={StaticResource GenderConverter},ConverterParameter=Female}" />
+                            <RadioButton FontSize="15" Foreground="#e6e6e6" Content="Other" Height="16" HorizontalAlignment="Left" Name="OtherRadioButton" VerticalAlignment="Center" Grid.Column="2" IsChecked="{Binding Patient.PatientGender,Converter={StaticResource GenderConverter},ConverterParameter=Other}" />
                         </Grid>
                         <Grid Grid.Column="1" Grid.Row="6" Margin="8" Width="250" HorizontalAlignment="Left">
                             <Grid.ColumnDefinitions>
@@ -241,7 +252,7 @@
                         <Label Grid.Column="3" Grid.Row="5">Other Medications</Label>
                         <TextBox Grid.Column="4" Grid.Row="1" Text="{Binding Patient.DoctorAssigned,Mode=TwoWay}" Validation.ErrorTemplate="{StaticResource validationTemplate}"/>
                         <TextBox Grid.Column="4" Grid.Row="2" Text="{Binding Patient.ReasonAdmitted,Mode=TwoWay}"/>
-                        <TextBox Grid.Column="4" Grid.Row="3" Text="{Binding Patient.BedNum,Mode=TwoWay}" Validation.ErrorTemplate="{StaticResource validationTemplate}"/>
+                        <TextBox Grid.Column="4" Grid.Row="3" Text="{Binding Patient.bedNo,Mode=TwoWay}" Validation.ErrorTemplate="{StaticResource validationTemplate}"/>
                         <DatePicker Foreground="#424242" Margin="8" Grid.Column="4" Grid.Row="4" HorizontalAlignment="Stretch"  Name="DatepickerAdmission" VerticalAlignment="Top" Text="{Binding Patient.AdmissionDate,Mode=TwoWay}"/>
                         <TextBox Grid.Column="4" Grid.Row="5" Grid.RowSpan="2" Height="70" VerticalAlignment="Top" Text="{Binding Patient.OtherMedications,Mode=TwoWay}"/>
                     </Grid>
@@ -255,7 +266,7 @@
                     </StackPanel>
                 </TabItem.Header>
                 <StackPanel Background="#1f1f1f" DataContext="{Binding Source={StaticResource ViewModel}}">
-                    <ListView Name="PatientList" Height="150" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedItem="{Binding SelectedPatient,Mode=TwoWay}" SelectedIndex="0">
+                    <ListView Name="PatientList" Height="160" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedItem="{Binding SelectedPatient,Mode=TwoWay}" SelectedIndex="0">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Background="Transparent" Orientation="Horizontal" />
@@ -310,7 +321,7 @@
                                     <Ellipse Grid.Column="0" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White}" Width="15" Height="15">
                                         
                                     </Ellipse>
-                                    <TextBlock Grid.Column="1" Padding="10" FontSize="18" FontWeight="Bold" Foreground="#c9c7c7" Text="{Binding PatientStatus,FallbackValue=Status}"></TextBlock>
+                                    <TextBlock Grid.Column="1" Padding="10" FontSize="18" FontWeight="Bold" Foreground="#c9c7c7" Text="{Binding PatientStatus,FallbackValue=Status,Mode=TwoWay,NotifyOnTargetUpdated=True}"></TextBlock>
 
                                 </Grid>
                             </Grid>
@@ -392,7 +403,7 @@
                                 
                             </Grid>
                             <TextBlock></TextBlock>
-                            <Button Width="100" Height="30" HorizontalAlignment="Right" Margin="0,0,100,0" Cursor="Hand">Start Exam</Button>
+                            <Button DataContext="{Binding Source={StaticResource ViewModel}}" Width="100" Height="30" HorizontalAlignment="Right" Margin="0,0,100,0" Cursor="Hand" Command="{Binding StartExamCommand}" CommandParameter="{Binding SelectedPatient}">Start Exam</Button>
                         </StackPanel>
                         <Grid Grid.Column="1">
                             <Grid.RowDefinitions>
@@ -401,34 +412,34 @@
                             </Grid.RowDefinitions>
                         
                         <Border Grid.Row="0" Height="210" Width="500"  VerticalAlignment="Top" Margin="10" BorderThickness="4" BorderBrush="#c9c7c7">
-                            <StackPanel DataContext="{Binding Source=PatientVitals}">
+                            <StackPanel>
                                 <TextBlock Padding="15,5,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Left" Text="Current Vitals :" FontSize="30" MaxHeight="100" />
-                                <Grid HorizontalAlignment="Center">
+                                <Grid HorizontalAlignment="Center" DataContext="{Binding Source={StaticResource ViewModel}}">
                                     <Grid.ColumnDefinitions>
 
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="SPO2 Level :" FontSize="25" Padding="0,20,0,0" />
-                                        <TextBlock Padding="10,20,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding spo2,FallbackValue=Vitals.spo2}" FontSize="25" MaxHeight="100" />
+                                        <TextBlock Padding="10,20,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding SelectedPatient.SPO2,FallbackValue=Vitals.spo2,Mode=TwoWay}" FontSize="25" MaxHeight="100" />
                                 </Grid>
-                                <Grid HorizontalAlignment="Center">
+                                <Grid HorizontalAlignment="Center" DataContext="{Binding Source={StaticResource ViewModel}}">
                                     <Grid.ColumnDefinitions>
 
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="Pulse Rate :" FontSize="25" Padding="0,10,0,0" />
-                                        <TextBlock Padding="10,10,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding pulse,FallbackValue=Vitals.pulse}" FontSize="25" MaxHeight="100" />
+                                        <TextBlock Padding="10,10,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding SelectedPatient.PulseRate,FallbackValue=Vitals.pulse,Mode=TwoWay}" FontSize="25" MaxHeight="100" />
                                 </Grid>
-                                <Grid HorizontalAlignment="Center">
+                                <Grid HorizontalAlignment="Center" DataContext="{Binding Source={StaticResource ViewModel}}">
                                     <Grid.ColumnDefinitions>
 
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="Temperature :" FontSize="25" Padding="0,10,0,0" />
-                                        <TextBlock Padding="10,10,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding temp,FallbackValue=Vitals.temp}" FontSize="25" MaxHeight="100" />
+                                        <TextBlock Padding="10,10,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="{Binding SelectedPatient.Temperature,FallbackValue=Vitals.temp,Mode=TwoWay}" FontSize="25" MaxHeight="100" />
                                 </Grid>
 
 
@@ -521,7 +532,7 @@
                 </TabItem.Header>
 
                 <StackPanel Background="#1f1f1f" DataContext="{Binding Source={StaticResource ViewModel}}">
-                    <ListView Name="PatientList2" Height="150" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedItem="{Binding SelectedPatient,Mode=TwoWay}" SelectedIndex="0">
+                    <ListView Name="PatientList2" Height="160" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedItem="{Binding SelectedPatient,Mode=TwoWay}" SelectedIndex="0">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Background="Transparent" Orientation="Horizontal" />
@@ -557,24 +568,60 @@
                             <RowDefinition Height="300"/>
                             <RowDefinition Height="290"/>
                         </Grid.RowDefinitions>
-                        <StackPanel Grid.Column="0" Grid.Row="0" x:Name="BedPanel01">
-                            <Label HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 01</Label>
+                        <StackPanel Grid.Column="0" Grid.Row="0" x:Name="BedPanel01"  DataContext="{Binding Source={StaticResource ViewModel}}">
+                            
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn1" Margin="0,0,0,10">Bed No: 01</Button>
                             <Grid>
-                                <Rectangle Width="130" Height="160" Name="bed1" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
-                                <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"/>
+                                <Rectangle Width="130" Height="160" Name="bed1" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2" />
+                                <Image Name="bedimg1" Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"/>
+                                <Grid Name="bedGrid1" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn1}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center" DataContext="{Binding BedNo1}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <Ellipse Grid.Column="0" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White}" Width="10" Height="10"/>
-                                <Label FontSize="15" Grid.Column="1" Content="{Binding PatientStatus,FallbackValue=Vacated}"/>
+                                <Label FontSize="15" Grid.Column="1" Content="{Binding PatientStatus,FallbackValue=Vacant}"/>
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center" DataContext="{Binding BedNo1}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -583,23 +630,59 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="1" Grid.Row="0">
-                            <Label HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 02</Label>
+                        <StackPanel Grid.Column="1" Grid.Row="0" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn2" Margin="0,0,0,10">Bed No: 02</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed2" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid2" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn2}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
+
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center" DataContext="{Binding BedNo2}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Ellipse Grid.Column="0" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White}" Width="10" Height="10"/>
                                 <Label FontSize="15" Grid.Column="1" Content="{Binding PatientStatus,FallbackValue=Vacated}"/>
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center" DataContext="{Binding BedNo2}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -608,14 +691,49 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="2" Grid.Row="0">
-                            <Label HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 03</Label>
+                        <StackPanel Grid.Column="2" Grid.Row="0" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn3" Margin="0,0,0,10">Bed No: 03</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed3" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid3" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn3}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center" DataContext="{Binding BedNo3}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -625,7 +743,7 @@
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center" DataContext="{Binding BedNo3}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -634,13 +752,48 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="3" Grid.Row="0">
-                            <Label HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 04</Label>
+                        <StackPanel Grid.Column="3" Grid.Row="0" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn4" Margin="0,0,0,10">Bed No: 04</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed4" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid4" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn4}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo4}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -650,7 +803,7 @@
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo4}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -659,13 +812,48 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="4" Grid.Row="0">
-                            <Label HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 05</Label>
+                        <StackPanel Grid.Column="4" Grid.Row="0" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn5" Margin="0,0,0,10">Bed No: 05</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed5" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid5" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn5}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo5}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -675,7 +863,7 @@
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo5}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -684,13 +872,48 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="5" Grid.Row="0">
-                            <Label HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 06</Label>
+                        <StackPanel Grid.Column="5" Grid.Row="0" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn6" Margin="0,0,0,10">Bed No: 06</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed6" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid6" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn6}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo6}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -700,7 +923,7 @@
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo6}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -709,13 +932,48 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="0" Grid.Row="1">
-                            <Label Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 07</Label>
+                        <StackPanel Grid.Column="0" Grid.Row="1" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn7" Margin="0,10,0,10">Bed No: 07</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed7" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid7" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn7}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo7}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -725,7 +983,7 @@
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo7}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -734,13 +992,48 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="1" Grid.Row="1">
-                            <Label Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 08</Label>
+                        <StackPanel Grid.Column="1" Grid.Row="1" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn8" Margin="0,10,0,10">Bed No: 08</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed8" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid8" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn8}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo8}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -750,7 +1043,7 @@
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo8}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -759,13 +1052,48 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="2" Grid.Row="1">
-                            <Label Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 09</Label>
+                        <StackPanel Grid.Column="2" Grid.Row="1" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn9" Margin="0,10,0,10">Bed No: 09</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed9" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid9" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn9}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo9}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -775,7 +1103,7 @@
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo9}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -784,23 +1112,58 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="3" Grid.Row="1">
-                            <Label Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 10</Label>
+                        <StackPanel Grid.Column="3" Grid.Row="1" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn10" Margin="0,10,0,10">Bed No: 10</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed10" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid10" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn10}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo10}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <Ellipse Grid.Column="0" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White}" Width="10" Height="10"/>
-                                <Label FontSize="15" Grid.Column="1" Content="{Binding PatientStatus,FallbackValue=Vacated}"/>
+                                <Label FontSize="15" Grid.Column="1" Content="{Binding PatientStatus,FallbackValue=Vacant}"/>
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo10}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -809,13 +1172,48 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="4" Grid.Row="1">
-                            <Label Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 11</Label>
+                        <StackPanel Grid.Column="4" Grid.Row="1" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn11" Margin="0,10,0,10">Bed No: 11</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed11" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid11" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn11}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo11}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -825,7 +1223,7 @@
 
 
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo11}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -834,13 +1232,48 @@
                                 <Label FontSize="15" FontWeight="Bold" Grid.Column="1" Content="{Binding PatientId,FallbackValue=Null}"></Label>
                             </Grid>
                         </StackPanel>
-                        <StackPanel Grid.Column="5" Grid.Row="1">
-                            <Label Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold">Bed No: 12</Label>
+                        <StackPanel Grid.Column="5" Grid.Row="1" DataContext="{Binding Source={StaticResource ViewModel}}">
+                            <Button Width="150" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Name="BedBtn12" Margin="0,10,0,10">Bed No: 12</Button>
                             <Grid>
                                 <Rectangle Width="130" Height="160" Name="bed12" Grid.Column="0" Grid.Row="0" Fill="#c2c2c2"/>
                                 <Image Width="180" Source="../Graphics/patientbed.png" Grid.Column="0" Grid.Row="0"></Image>
+                                <Grid Name="bedGrid12" >
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver ,ElementName=BedBtn12}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                    <Border Width="103" Height="135" BorderThickness="1"
+                                            CornerRadius="5" BorderBrush="#4a4a4a" Background="#4a4a4a">
+                                    </Border>
+                                    <StackPanel  Width="103" Height="133" DataContext="{Binding BedNo1}">
+                                        <Label HorizontalAlignment="Center" FontSize="10" FontWeight="Bold" Margin="0,5,0,10">Current Vitals</Label>
+                                        <Grid Width="80">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
+                                            <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
+                                            <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding SPO2,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue=0 }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=0 }"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo12}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -848,7 +1281,7 @@
                                 <Ellipse Grid.Column="0" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White}" Width="10" Height="10"/>
                                 <Label FontSize="15" Grid.Column="1" Content="{Binding PatientStatus,FallbackValue=Vacated}"/>
                             </Grid>
-                            <Grid HorizontalAlignment="Center">
+                            <Grid HorizontalAlignment="Center"  DataContext="{Binding BedNo12}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
@@ -868,7 +1301,7 @@
                     </StackPanel>
                 </TabItem.Header>
                 <StackPanel Background="#1f1f1f" DataContext="{Binding Source={StaticResource ViewModel}}">
-                    <ListView Name="PatientList3" Height="150" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedItem="{Binding SelectedPatient,Mode=TwoWay}" SelectedIndex="0">
+                    <ListView Name="PatientList3" Height="160" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedItem="{Binding SelectedPatient,Mode=TwoWay}" SelectedIndex="0">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Background="Transparent" Orientation="Horizontal" />
@@ -898,7 +1331,7 @@
                         <Label Grid.Column="0" FontSize="20" Padding="30">Patient ID</Label>
                         <TextBox Grid.Column="1" Width="300" Text="{Binding PatientId}"/>
                     </Grid>
-                    <Button Width="200" Margin="0,20" FontSize="20">Discharge</Button>
+                    <Button Width="200" Margin="0,20" FontSize="20" Command="{Binding DischargeCommand}" CommandParameter="{Binding SelectedPatient}">Discharge</Button>
                 </StackPanel>
 
             </TabItem>
