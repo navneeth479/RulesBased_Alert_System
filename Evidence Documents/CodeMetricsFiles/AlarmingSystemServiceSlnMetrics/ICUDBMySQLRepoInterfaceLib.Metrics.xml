@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="ICUDBMySQLRepoInterfaceLib.csproj">
+      <Assembly Name="ICUDBMySQLRepoInterfaceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="100" />
+          <Metric Name="CyclomaticComplexity" Value="8" />
+          <Metric Name="ClassCoupling" Value="3" />
+          <Metric Name="DepthOfInheritance" Value="0" />
+          <Metric Name="LinesOfCode" Value="18" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="ICUDBMySQLRepoInterfaceLib">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="100" />
+              <Metric Name="CyclomaticComplexity" Value="8" />
+              <Metric Name="ClassCoupling" Value="3" />
+              <Metric Name="DepthOfInheritance" Value="0" />
+              <Metric Name="LinesOfCode" Value="18" />
+            </Metrics>
+            <Types>
+              <NamedType Name="IIcudbRepo">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="8" />
+                  <Metric Name="ClassCoupling" Value="3" />
+                  <Metric Name="DepthOfInheritance" Value="0" />
+                  <Metric Name="LinesOfCode" Value="15" />
+                </Metrics>
+                <Members>
+                  <Method Name="void IIcudbRepo.ReadRecord(ref string id, ref int spo2, ref int pulse, ref double temp)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepoInterfaceLib\IICUDBRepo.cs" Line="13">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="2" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void IIcudbRepo.DischargePatient(string id, int bedno)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepoInterfaceLib\IICUDBRepo.cs" Line="15">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="2" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="List&lt;ICUStatu&gt; IIcudbRepo.GetPatient()" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepoInterfaceLib\IICUDBRepo.cs" Line="16">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="ICUStatu IIcudbRepo.GetSpecificPatient(string id)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepoInterfaceLib\IICUDBRepo.cs" Line="17">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="ICUStatu IIcudbRepo.GetPatientBasedOnBed(int id)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepoInterfaceLib\IICUDBRepo.cs" Line="18">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="ICUStatu IIcudbRepo.AddPatient(ICUStatu record)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepoInterfaceLib\IICUDBRepo.cs" Line="19">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void IIcudbRepo.UpdateVitals(string id, Patient vitals)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepoInterfaceLib\IICUDBRepo.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="ICUStatu IIcudbRepo.UpdatePatientStatus(string id, ICUStatu updatestatus)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\ICUDBMySQLRepoInterfaceLib\IICUDBRepo.cs" Line="21">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

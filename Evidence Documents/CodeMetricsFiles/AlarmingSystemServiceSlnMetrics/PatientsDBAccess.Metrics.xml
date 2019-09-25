@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="PatientsDBAccess.csproj">
+      <Assembly Name="PatientsDBAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="99" />
+          <Metric Name="CyclomaticComplexity" Value="38" />
+          <Metric Name="ClassCoupling" Value="7" />
+          <Metric Name="DepthOfInheritance" Value="2" />
+          <Metric Name="LinesOfCode" Value="65" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="PatientsDBAccess">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="99" />
+              <Metric Name="CyclomaticComplexity" Value="38" />
+              <Metric Name="ClassCoupling" Value="7" />
+              <Metric Name="DepthOfInheritance" Value="2" />
+              <Metric Name="LinesOfCode" Value="65" />
+            </Metrics>
+            <Types>
+              <NamedType Name="ICUDBEntities1">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="98" />
+                  <Metric Name="CyclomaticComplexity" Value="4" />
+                  <Metric Name="ClassCoupling" Value="5" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="LinesOfCode" Value="15" />
+                </Metrics>
+                <Members>
+                  <Method Name="ICUDBEntities1.ICUDBEntities1()" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUDBEntities.Context.cs" Line="18">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="4" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void ICUDBEntities1.OnModelCreating(DbModelBuilder modelBuilder)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUDBEntities.Context.cs" Line="23">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                  <Property Name="DbSet&lt;ICUStatu&gt; ICUDBEntities1.ICUStatus" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUDBEntities.Context.cs" Line="28">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="2" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="DbSet&lt;ICUStatu&gt; ICUDBEntities1.ICUStatus.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUDBEntities.Context.cs" Line="28">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUDBEntities1.ICUStatus.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUDBEntities.Context.cs" Line="28">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+              <NamedType Name="ICUStatu">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="34" />
+                  <Metric Name="ClassCoupling" Value="2" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="21" />
+                </Metrics>
+                <Members>
+                  <Property Name="string ICUStatu.PatientId" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="17">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.PatientId.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="17">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.PatientId.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="17">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string ICUStatu.FirstName" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="18">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.FirstName.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="18">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.FirstName.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="18">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string ICUStatu.LastName" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="19">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.LastName.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="19">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.LastName.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="19">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string ICUStatu.PatientDob" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.PatientDob.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="20">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.PatientDob.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="20">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int? ICUStatu.PatientAge" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="21">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int? ICUStatu.PatientAge.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="21">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.PatientAge.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="21">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string ICUStatu.PatientGender" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="22">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.PatientGender.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="22">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.PatientGender.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="22">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="double? ICUStatu.PatientHeight" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="23">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="double? ICUStatu.PatientHeight.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="23">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.PatientHeight.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="23">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="double? ICUStatu.PatientWeight" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="24">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="double? ICUStatu.PatientWeight.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="24">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.PatientWeight.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="24">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string ICUStatu.DoctorAssigned" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="25">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.DoctorAssigned.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="25">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.DoctorAssigned.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="25">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string ICUStatu.ReasonAdmitted" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="26">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.ReasonAdmitted.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="26">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.ReasonAdmitted.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="26">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string ICUStatu.AdmissionDate" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="27">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.AdmissionDate.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="27">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.AdmissionDate.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="27">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string ICUStatu.OtherMedications" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="28">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.OtherMedications.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="28">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.OtherMedications.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="28">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int? ICUStatu.SPO2" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="29">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int? ICUStatu.SPO2.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="29">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.SPO2.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="29">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int? ICUStatu.PulseRate" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="30">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int? ICUStatu.PulseRate.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="30">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.PulseRate.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="30">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int? ICUStatu.Temperature" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="31">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int? ICUStatu.Temperature.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="31">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.Temperature.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="31">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string ICUStatu.PatientStatus" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="32">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string ICUStatu.PatientStatus.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="32">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.PatientStatus.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="32">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int ICUStatu.bedNo" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="33">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int ICUStatu.bedNo.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="33">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ICUStatu.bedNo.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PatientsDBAccess\ICUStatu.cs" Line="33">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

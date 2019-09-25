@@ -42,3 +42,8 @@ C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\TemperatureCh
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.csproj.CopyComplete
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.dll
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\obj\Debug\TemperatureCheckerLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\EntityFramework.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\DataModelsLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\EntityFramework.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TemperatureCheckerLib\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,0 +1,1566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="AlertingSystem_LoginPage.csproj">
+      <Assembly Name="AlertingSystem_LoginPage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="90" />
+          <Metric Name="CyclomaticComplexity" Value="121" />
+          <Metric Name="ClassCoupling" Value="59" />
+          <Metric Name="DepthOfInheritance" Value="9" />
+          <Metric Name="LinesOfCode" Value="665" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="AlertingSystem_LoginPage">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="100" />
+              <Metric Name="CyclomaticComplexity" Value="2" />
+              <Metric Name="ClassCoupling" Value="3" />
+              <Metric Name="DepthOfInheritance" Value="9" />
+              <Metric Name="LinesOfCode" Value="24" />
+            </Metrics>
+            <Types>
+              <NamedType Name="App">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="3" />
+                  <Metric Name="LinesOfCode" Value="6" />
+                </Metrics>
+              </NamedType>
+              <NamedType Name="MainWindow">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="2" />
+                  <Metric Name="DepthOfInheritance" Value="9" />
+                  <Metric Name="LinesOfCode" Value="10" />
+                </Metrics>
+                <Members>
+                  <Method Name="MainWindow.MainWindow()" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Views\MainWindow.xaml.cs" Line="23">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="4" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+          <Namespace Name="AlertingSystem_LoginPage.Models">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="97" />
+              <Metric Name="CyclomaticComplexity" Value="36" />
+              <Metric Name="ClassCoupling" Value="0" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="LinesOfCode" Value="40" />
+            </Metrics>
+            <Types>
+              <NamedType Name="Gender">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="93" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="0" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="4" />
+                </Metrics>
+                <Members>
+                  <Field Name="Gender.Female" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Gender.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="93" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="Gender.Male" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Gender.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="93" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="Gender.Other" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Gender.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="93" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                </Members>
+              </NamedType>
+              <NamedType Name="Patient">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="34" />
+                  <Metric Name="ClassCoupling" Value="0" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="20" />
+                </Metrics>
+                <Members>
+                  <Property Name="string Patient.FirstName" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.FirstName.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="11">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.FirstName.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="11">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string Patient.LastName" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.LastName.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="12">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.LastName.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="12">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string Patient.PatientId" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="13">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.PatientId.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="13">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.PatientId.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="13">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string Patient.PatientDob" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.PatientDob.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="14">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.PatientDob.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="14">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int Patient.PatientAge" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="15">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int Patient.PatientAge.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="15">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.PatientAge.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="15">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string Patient.PatientGender" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="16">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.PatientGender.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="16">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.PatientGender.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="16">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="float Patient.PatientHeight" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="17">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="float Patient.PatientHeight.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="17">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.PatientHeight.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="17">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="float Patient.PatientWeight" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="18">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="float Patient.PatientWeight.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="18">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.PatientWeight.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="18">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string Patient.DoctorAssigned" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="19">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.DoctorAssigned.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="19">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.DoctorAssigned.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="19">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string Patient.ReasonAdmitted" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.ReasonAdmitted.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="20">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.ReasonAdmitted.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="20">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int Patient.bedNo" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="21">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int Patient.bedNo.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="21">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.bedNo.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="21">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string Patient.AdmissionDate" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="22">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.AdmissionDate.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="22">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.AdmissionDate.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="22">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string Patient.OtherMedications" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="23">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.OtherMedications.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="23">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.OtherMedications.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="23">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string Patient.PatientStatus" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="24">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string Patient.PatientStatus.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="24">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.PatientStatus.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="24">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int Patient.SPO2" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="25">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int Patient.SPO2.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="25">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.SPO2.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="25">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int Patient.PulseRate" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="26">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int Patient.PulseRate.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="26">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.PulseRate.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="26">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int Patient.Temperature" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="27">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int Patient.Temperature.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="27">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Patient.Temperature.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Models\Patient.cs" Line="27">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+              <NamedType Name="PatientRegistration">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="0" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="4" />
+                </Metrics>
+              </NamedType>
+            </Types>
+          </Namespace>
+          <Namespace Name="AlertingSystem_LoginPage.Properties">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="87" />
+              <Metric Name="CyclomaticComplexity" Value="6" />
+              <Metric Name="ClassCoupling" Value="12" />
+              <Metric Name="DepthOfInheritance" Value="3" />
+              <Metric Name="LinesOfCode" Value="101" />
+            </Metrics>
+            <Types>
+              <NamedType Name="Resources">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="82" />
+                  <Metric Name="CyclomaticComplexity" Value="5" />
+                  <Metric Name="ClassCoupling" Value="10" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="58" />
+                </Metrics>
+                <Members>
+                  <Field Name="ResourceManager Resources.resourceMan" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Resources.Designer.cs" Line="28">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="CultureInfo Resources.resourceCulture" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Resources.Designer.cs" Line="30">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Method Name="Resources.Resources()" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Resources.Designer.cs" Line="33">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="98" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                  <Property Name="ResourceManager Resources.ResourceManager" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Resources.Designer.cs" Line="41">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="75" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="LinesOfCode" Value="17" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="ResourceManager Resources.ResourceManager.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Resources.Designer.cs" Line="43">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="75" />
+                          <Metric Name="CyclomaticComplexity" Value="2" />
+                          <Metric Name="ClassCoupling" Value="3" />
+                          <Metric Name="LinesOfCode" Value="9" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="CultureInfo Resources.Culture" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Resources.Designer.cs" Line="59">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="98" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="17" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="CultureInfo Resources.Culture.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Resources.Designer.cs" Line="61">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="4" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void Resources.Culture.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Resources.Designer.cs" Line="65">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="96" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="4" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+              <NamedType Name="Settings">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="92" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="4" />
+                  <Metric Name="DepthOfInheritance" Value="3" />
+                  <Metric Name="LinesOfCode" Value="17" />
+                </Metrics>
+                <Members>
+                  <Field Name="Settings Settings.defaultInstance" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Settings.Designer.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="89" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Property Name="Settings Settings.Default" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Settings.Designer.cs" Line="22">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="8" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Settings Settings.Default.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\Properties\Settings.Designer.cs" Line="24">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="4" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+          <Namespace Name="AlertingSystem_LoginPage.ViewModels">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="85" />
+              <Metric Name="CyclomaticComplexity" Value="77" />
+              <Metric Name="ClassCoupling" Value="48" />
+              <Metric Name="DepthOfInheritance" Value="2" />
+              <Metric Name="LinesOfCode" Value="500" />
+            </Metrics>
+            <Types>
+              <NamedType Name="Client">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="64" />
+                  <Metric Name="CyclomaticComplexity" Value="7" />
+                  <Metric Name="ClassCoupling" Value="17" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="78" />
+                </Metrics>
+                <Members>
+                  <Method Name="ObservableCollection&lt;Patient&gt; Client.GetAllPatients()" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\Client.cs" Line="22">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="66" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="12" />
+                      <Metric Name="LinesOfCode" Value="15" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Patient Client.GetPatientBasedOnBed(int bed)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\Client.cs" Line="36">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="65" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="11" />
+                      <Metric Name="LinesOfCode" Value="15" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="Patient Client.GetPatient(string id)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\Client.cs" Line="50">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="66" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="11" />
+                      <Metric Name="LinesOfCode" Value="13" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void Client.RegisterPatient(Patient patient)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\Client.cs" Line="64">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="62" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="12" />
+                      <Metric Name="LinesOfCode" Value="16" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void Client.UpdatePatient(string id, Patient patient)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\Client.cs" Line="80">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="62" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="12" />
+                      <Metric Name="LinesOfCode" Value="16" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="DatetimeToDateConverter">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="92" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="4" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="13" />
+                </Metrics>
+                <Members>
+                  <Method Name="object DatetimeToDateConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\DatetimeToDateConverter.cs" Line="13">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="85" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="object DatetimeToDateConverter.ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\DatetimeToDateConverter.cs" Line="19">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="GenderConverter">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="92" />
+                  <Metric Name="CyclomaticComplexity" Value="3" />
+                  <Metric Name="ClassCoupling" Value="3" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="13" />
+                </Metrics>
+                <Members>
+                  <Method Name="object GenderConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\GenderConverter.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="93" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="4" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="object GenderConverter.ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\GenderConverter.cs" Line="19">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="93" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="RelayCommand">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="90" />
+                  <Metric Name="CyclomaticComplexity" Value="9" />
+                  <Metric Name="ClassCoupling" Value="7" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="28" />
+                </Metrics>
+                <Members>
+                  <Method Name="RelayCommand.RelayCommand(Action&lt;object&gt; execute)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\RelayCommand.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="97" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="3" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="RelayCommand.RelayCommand(Action&lt;object&gt; execute, Predicate&lt;object&gt; canExecute)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\RelayCommand.cs" Line="15">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="82" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="bool RelayCommand.CanExecute(object parameter)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\RelayCommand.cs" Line="20">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="91" />
+                      <Metric Name="CyclomaticComplexity" Value="3" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="4" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void RelayCommand.Execute(object parameter)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\RelayCommand.cs" Line="25">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="96" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                  <Event Name="event EventHandler RelayCommand.CanExecuteChanged" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\RelayCommand.cs" Line="30">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="96" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="6" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="void RelayCommand.CanExecuteChanged.add" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\RelayCommand.cs" Line="32">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="96" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void RelayCommand.CanExecuteChanged.remove" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\RelayCommand.cs" Line="33">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="96" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Event>
+                  <Field Name="Action&lt;object&gt; RelayCommand._execute" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\RelayCommand.cs" Line="35">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="Predicate&lt;object&gt; RelayCommand._canExecute" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\RelayCommand.cs" Line="36">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                </Members>
+              </NamedType>
+              <NamedType Name="StatusToColorBrushConverter">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="87" />
+                  <Metric Name="CyclomaticComplexity" Value="7" />
+                  <Metric Name="ClassCoupling" Value="7" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="28" />
+                </Metrics>
+                <Members>
+                  <Method Name="object StatusToColorBrushConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\StatusToColorBrushConverter.cs" Line="17">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="79" />
+                      <Metric Name="CyclomaticComplexity" Value="6" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="LinesOfCode" Value="20" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="object StatusToColorBrushConverter.ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\StatusToColorBrushConverter.cs" Line="38">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="ViewModel">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="76" />
+                  <Metric Name="CyclomaticComplexity" Value="47" />
+                  <Metric Name="ClassCoupling" Value="18" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="LinesOfCode" Value="299" />
+                </Metrics>
+                <Members>
+                  <Field Name="Patient ViewModel._patient" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="23">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="Patient ViewModel._selectedPatient" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="24">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="ObservableCollection&lt;Patient&gt; ViewModel._patients" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="25">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="ICommand ViewModel._submitCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="26">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="ICommand ViewModel._closeCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="27">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="ICommand ViewModel._resetCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="28">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="ICommand ViewModel._dischargeCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="29">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="ICommand ViewModel._startexamCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="30">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Field Name="Client ViewModel.clt" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="32">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="93" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Field>
+                  <Property Name="Patient ViewModel.BedNo1" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="36">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="14" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo1.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="38">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo1.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="39">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="7" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo2" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="47">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo2.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="49">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo2.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="50">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo3" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="57">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo3.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="59">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo3.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="60">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo4" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="67">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo4.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="69">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo4.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="70">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo5" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="77">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo5.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="79">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo5.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="80">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo6" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="87">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="82" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="LinesOfCode" Value="11" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo6.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="89">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="84" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="5" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo6.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="90">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="81" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="7" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo7" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="98">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo7.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="100">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo7.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="101">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo8" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="108">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo8.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="110">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo8.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="111">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo9" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="118">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo9.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="120">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo9.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="121">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo10" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="128">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo10.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="130">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo10.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="131">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo11" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="138">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo11.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="140">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo11.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="141">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.BedNo12" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="148">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.BedNo12.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="150">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="94" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.BedNo12.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="151">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.SelectedPatient" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="158">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="93" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="9" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.SelectedPatient.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="160">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.SelectedPatient.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="161">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="5" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="Patient ViewModel.Patient" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="167">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="90" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="Patient ViewModel.Patient.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="169">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.Patient.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="170">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="81" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="1" />
+                          <Metric Name="LinesOfCode" Value="6" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="ObservableCollection&lt;Patient&gt; ViewModel.Patients" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="180">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="93" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="12" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="ObservableCollection&lt;Patient&gt; ViewModel.Patients.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="182">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void ViewModel.Patients.set" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="183">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="86" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="2" />
+                          <Metric Name="LinesOfCode" Value="5" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="ICommand ViewModel.ResetCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="194">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="76" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="LinesOfCode" Value="17" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="ICommand ViewModel.ResetCommand.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="196">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="76" />
+                          <Metric Name="CyclomaticComplexity" Value="2" />
+                          <Metric Name="ClassCoupling" Value="4" />
+                          <Metric Name="LinesOfCode" Value="9" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="ICommand ViewModel.SubmitCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="206">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="76" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="LinesOfCode" Value="13" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="ICommand ViewModel.SubmitCommand.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="208">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="76" />
+                          <Metric Name="CyclomaticComplexity" Value="2" />
+                          <Metric Name="ClassCoupling" Value="4" />
+                          <Metric Name="LinesOfCode" Value="10" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="ICommand ViewModel.CloseCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="220">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="81" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="LinesOfCode" Value="14" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="ICommand ViewModel.CloseCommand.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="222">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="81" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="4" />
+                          <Metric Name="LinesOfCode" Value="9" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="ICommand ViewModel.StartExamCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="234">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="76" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="LinesOfCode" Value="13" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="ICommand ViewModel.StartExamCommand.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="236">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="76" />
+                          <Metric Name="CyclomaticComplexity" Value="2" />
+                          <Metric Name="ClassCoupling" Value="4" />
+                          <Metric Name="LinesOfCode" Value="9" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="ICommand ViewModel.DischargeCommand" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="247">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="84" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="LinesOfCode" Value="10" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="ICommand ViewModel.DischargeCommand.get" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="249">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="84" />
+                          <Metric Name="CyclomaticComplexity" Value="2" />
+                          <Metric Name="ClassCoupling" Value="4" />
+                          <Metric Name="LinesOfCode" Value="5" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Method Name="void ViewModel.DischargePatient(object param)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="257">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="72" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="9" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void ViewModel.StartExam(object param)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="266">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="67" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="12" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="ViewModel.ViewModel()" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="278">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="73" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="LinesOfCode" Value="9" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void ViewModel.Patients_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="286">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="89" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void ViewModel.Submit()" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="292">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="66" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="11" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void ViewModel.Reset()" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="303">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="95" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="5" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void ViewModel.CloseWindow()" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModel.cs" Line="308">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="82" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="LinesOfCode" Value="9" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="ViewModelBase">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="95" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="3" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="12" />
+                </Metrics>
+                <Members>
+                  <Event Name="event PropertyChangedEventHandler ViewModelBase.PropertyChanged" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModelBase.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="0" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                  </Event>
+                  <Method Name="void ViewModelBase.NotifyPropertyChanged(string propertyName)" File="C:\Bootcamp\Phase2_RulesBased\AlertingSystem_GUI\AlertingSystem_LoginPage\ViewModels\ViewModelBase.cs" Line="18">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="92" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="2" />
+                      <Metric Name="LinesOfCode" Value="7" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

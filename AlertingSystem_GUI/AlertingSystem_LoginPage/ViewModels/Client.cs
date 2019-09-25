@@ -7,6 +7,7 @@ using System.Net.Http.Headers;
 
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows;
 using System.Windows.Controls;
 using AlertingSystem_LoginPage.Models;
@@ -60,6 +61,20 @@ namespace AlertingSystem_LoginPage.ViewModels
             return output;
         }
 
+        public List<int> GetVitals(string id)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/Getvitals/");
+
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var response = client.GetAsync(id).Result;
+            string s = response.Content.ReadAsStringAsync().Result;
+            var output = JsonConvert.DeserializeObject<List<int>>(s);
+            return output;
+        }
+
         public void RegisterPatient(Patient patient)
         {
             HttpClient client = new HttpClient();
@@ -69,9 +84,9 @@ namespace AlertingSystem_LoginPage.ViewModels
             var byteContent = new ByteArrayContent(buffer);
             byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             var result = client.PostAsync("api/NurseStation/register", byteContent).Result;
-            if (result.IsSuccessStatusCode)
+            if (!result.IsSuccessStatusCode)
             {
-               return;
+               throw new HttpException("Error");
             }
             
         }
@@ -85,11 +100,25 @@ namespace AlertingSystem_LoginPage.ViewModels
             var byteContent = new ByteArrayContent(buffer);
             byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             var result = client.PutAsync(id.ToString(), byteContent).Result;
-            if (result.IsSuccessStatusCode)
+            if (!result.IsSuccessStatusCode)
             {
-                return;
+                throw new HttpException("Error");
             }
 
+        }
+
+        public List<string> GetPatientCondition(string id)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:56294/api/PatientCondition/");
+
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var response = client.GetAsync(id).Result;
+            string s = response.Content.ReadAsStringAsync().Result;
+            var output = JsonConvert.DeserializeObject<List<string>>(s);
+            return output;
         }
     }
 }

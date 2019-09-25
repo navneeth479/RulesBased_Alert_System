@@ -9,9 +9,7 @@ namespace AlertingSystem_LoginPage.ViewModels
 {
     public class RelayCommand:ICommand
     {
-        public RelayCommand(Action<object> execute) : this(execute, null)
-        {
-        }
+        
         public RelayCommand(Action<object> execute, Predicate<object> canExecute)
         {
             _execute = execute ?? throw new ArgumentNullException("execute");

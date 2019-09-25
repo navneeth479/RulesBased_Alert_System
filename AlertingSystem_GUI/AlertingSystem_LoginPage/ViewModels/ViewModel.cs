@@ -11,11 +11,12 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Net.Http;
-//using NewtonSoft.Json;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Windows.Controls;
 using AlertingSystem_LoginPage.Models;
+using System.Windows.Threading;
+using VitalSimulatorMangerLib;
 
 namespace AlertingSystem_LoginPage.ViewModels
 {
@@ -23,23 +24,58 @@ namespace AlertingSystem_LoginPage.ViewModels
     {
         private Patient _patient;
         private Patient _selectedPatient;
-        private ObservableCollection<Patient> _patients =new ObservableCollection<Patient>();
+        private ObservableCollection<Patient> _patients;
+        private ICommand _resetAlarmCommand;
         private ICommand _submitCommand;
         private ICommand _closeCommand;
         private ICommand _resetCommand;
         private ICommand _dischargeCommand;
         private ICommand _startexamCommand;
 
-        private Client clt = new Client();
+        private readonly Client clt = new Client();
 
-        //public Patient GetPatientBasedOnBed(int id)
-        //{
-        //    Patients = new ObservableCollection<Patient>();
-        //    Patients.CollectionChanged += new NotifyCollectionChangedEventHandler(Patients_CollectionChanged);
-        //    _patients = clt.GetAllPatients();
-        //    return _patients.FirstOrDefault(e => e.bedNo == id);
-        //}
+        private ObservableCollection<int> _spo2data;
+        private ObservableCollection<int> _tempdata;
+        private ObservableCollection<int> _pulsedata;
+        private ObservableCollection<DateTime> _timedata;
 
+        public ObservableCollection<DateTime> TimeData
+        {
+            get => _timedata;
+            set
+            {
+                _timedata = value;
+                NotifyPropertyChanged("TimeData");
+            }
+        }
+
+        public ObservableCollection<int> SPO2Data
+        {
+            get => _spo2data;
+            set
+            {
+                _spo2data = value;
+                NotifyPropertyChanged("SPO2Data");
+            }
+        }
+        public ObservableCollection<int> PulseData
+        {
+            get => _pulsedata;
+            set
+            {
+                _pulsedata = value;
+                NotifyPropertyChanged("SPO2Data");
+            }
+        }
+        public ObservableCollection<int> TempData
+        {
+            get => _tempdata;
+            set
+            {
+                _tempdata = value;
+                NotifyPropertyChanged("SPO2Data");
+            }
+        }
         public Patient BedNo1
         {
             get => clt.GetPatientBasedOnBed(1);
@@ -93,7 +129,7 @@ namespace AlertingSystem_LoginPage.ViewModels
         }
         public Patient BedNo6
         {
-            get => _patients.FirstOrDefault(e => e.bedNo == 6);
+            get => clt.GetPatientBasedOnBed(6);
             set
             {
                 _patient = value;
@@ -194,8 +230,20 @@ namespace AlertingSystem_LoginPage.ViewModels
             }
         }
 
-     
 
+
+        public ICommand ResetAlarmCommand
+        {
+            get
+            {
+                if (_resetAlarmCommand == null)
+                {
+                    _resetAlarmCommand = new RelayCommand(param => this.ResetAlarm(param),
+                        null);
+                }
+                return _resetAlarmCommand;
+            }
+        }
 
 
         public ICommand ResetCommand
@@ -228,11 +276,9 @@ namespace AlertingSystem_LoginPage.ViewModels
         {
             get
             {
-                if (_closeCommand == null)
-                {
                     _closeCommand = new RelayCommand(param => this.CloseWindow(),
                         null);
-                }
+                
                 return _closeCommand;
             }
             
@@ -255,12 +301,8 @@ namespace AlertingSystem_LoginPage.ViewModels
         {
             get
             {
-                if (_dischargeCommand == null)
-                {
-                    _dischargeCommand = new RelayCommand(param => DischargePatient(param),
-                        null);
-                }
-                return _dischargeCommand;
+                return _dischargeCommand ?? (_dischargeCommand = new RelayCommand(param => DischargePatient(param),
+                           null));
             }
 
         }
@@ -269,22 +311,49 @@ namespace AlertingSystem_LoginPage.ViewModels
         {
             var patient = param as Patient;
             patient.PatientStatus = "Discharged";
+            patient.BedNum = 0;
             Patients.Remove(patient);
             clt.UpdatePatient(patient.PatientId, patient);
             NotifyPropertyChanged("SelectedPatient");
+
+        }
+        
+
+        private void VitalSimulator(Patient p)
+        {
+            string id = p.PatientId;
+            VitalSimulatorManager vitalSimulator = new VitalSimulatorManager();
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.DoWork += (obj, e) => vitalSimulator.StartSimulation(id);
+            worker.RunWorkerAsync();
+            p.PatientStatus = "Active";
+            List<string> conditionList;
+            List<int> vitalsList;
+            for (int i = 0; i < 100; i++)
+            {
+                vitalsList = clt.GetVitals(id);
+                conditionList = clt.GetPatientCondition(id);
+                p.SPO2 = vitalsList[0];
+                p.PulseRate = vitalsList[1];
+                p.Temperature = vitalsList[2];
+                p.SPO2Status = conditionList[0];
+                p.PulseRateStatus = conditionList[1];
+                p.TemperatureStatus = conditionList[2];
+                Thread.Sleep(5000);
+            }
         }
 
         private void StartExam(object param)
         {
-
-            var patient = param as Patient;
-            patient.PatientStatus = "Active";
-            patient.PulseRate = 1;
-            patient.SPO2 = 1;
-            patient.Temperature = 1;
-            NotifyPropertyChanged("SelectedPatient");
-            clt.UpdatePatient(patient.PatientId, patient);
+            
+            _patient = param as Patient;
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.DoWork += (obj, e) => VitalSimulator(_patient);
+            
+            worker.RunWorkerAsync();
         }
+
+        
 
         public ViewModel()
         {
@@ -292,12 +361,27 @@ namespace AlertingSystem_LoginPage.ViewModels
             Patients=new ObservableCollection<Patient>();
             Patients.CollectionChanged +=new NotifyCollectionChangedEventHandler(Patients_CollectionChanged);
             _patients = clt.GetAllPatients();
+            SPO2Data = new ObservableCollection<int>();
+            PulseData = new ObservableCollection<int>();
+            TempData = new ObservableCollection<int>();
+            TimeData = new ObservableCollection<DateTime>();
+            PulseData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
+            TempData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
+            PulseData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
+            TimeData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
+
             
+
         }
+
+        void Data_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            NotifyPropertyChanged("SelectedPatient");
+        }
+
         void Patients_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             NotifyPropertyChanged("Patients");
-            NotifyPropertyChanged("BedNo6");
         }
 
         private void Submit()
@@ -309,6 +393,11 @@ namespace AlertingSystem_LoginPage.ViewModels
             clt.RegisterPatient(Patient);
             Patients.Insert(0, clt.GetPatient(Patient.PatientId));
             Patient =new Patient();
+        }
+        private void ResetAlarm(object param)
+        {
+            _patient = param as Patient;
+            _patient.PatientStatus = "Active";
         }
 
         private void Reset()
@@ -325,7 +414,16 @@ namespace AlertingSystem_LoginPage.ViewModels
              
         }
 
-        
-        
+        //Task<string> DoWork()
+        //{
+        //    return Task.Run(() =>
+        //    {
+
+        //        return GetRandomNumberAsString();
+        //    });
+        //}
+
+
+
     }
 }

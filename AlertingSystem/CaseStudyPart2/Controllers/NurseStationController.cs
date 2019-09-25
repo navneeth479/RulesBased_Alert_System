@@ -18,9 +18,7 @@ namespace CaseStudyPart2.Controllers
 {
     public class NurseStationController : ApiController
     {
-        ISpo2Checker _spo2Checker;
-        IPulseChecker _pulseChecker;
-        ITempChecker _tempChecker;
+        
         ICUDBMySQLRepoInterfaceLib.IICUDBRepo _db;
         UnityContainer _con = new UnityContainer();
         public NurseStationController()
@@ -98,6 +96,24 @@ namespace CaseStudyPart2.Controllers
             catch (Exception ex)
             { return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex); }
         }
+
+        [Route("api/NurseStation/Getvitals/{id}")]
+        [HttpGet]
+        public HttpResponseMessage GetVitals(string id)
+        {
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+
+            try
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, _db.GetVitals(id));
+            }
+
+
+
+            catch (Exception ex)
+            { return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex); }
+        }
+
         [Route("api/NurseStation/UpdatePatientRecord/{id}")]
         [HttpPut]
         public HttpResponseMessage Put(string id, [FromBody] ICUStatu patientstatus)
@@ -137,13 +153,53 @@ namespace CaseStudyPart2.Controllers
             }
         }
 
-        [Route("api/NurseStation/UpdateVitals/{id}")]
+        [Route("api/NurseStation/spo2/{id}")]
         [HttpPut]
-        public void UpdateVitals(string id, Patient vitals)
+        public HttpResponseMessage UpdateSpo2(string id,[FromBody] int spo2)
         {
             _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
 
-            _db.UpdateVitals(id, vitals);
+            var entity= _db.UpdateSpo2(id, spo2);
+
+            if (entity == null)
+            { return Request.CreateErrorResponse(HttpStatusCode.NotFound, "patient with id" + id + "Is not found"); }
+
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, "models details successfully updated ");
+            }
+        }
+
+        [Route("api/NurseStation/pulse/{id}")]
+        [HttpPut]
+        public HttpResponseMessage UpdatePulse(string id,[FromBody] int pulse)
+        {
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+
+            var entity= _db.UpdatePulse(id, pulse);
+            if (entity == null)
+            { return Request.CreateErrorResponse(HttpStatusCode.NotFound, "patient with id" + id + "Is not found"); }
+
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, "models details successfully updated ");
+            }
+        }
+
+        [Route("api/NurseStation/tempt/{id}")]
+        [HttpPut]
+        public HttpResponseMessage UpdateTemp(string id,[FromBody] int temp)
+        {
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+
+            var entity=_db.UpdateTemp(id, temp);
+            if (entity == null)
+            { return Request.CreateErrorResponse(HttpStatusCode.NotFound, "patient with id" + id + "Is not found"); }
+
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, "models details successfully updated ");
+            }
         }
 
 

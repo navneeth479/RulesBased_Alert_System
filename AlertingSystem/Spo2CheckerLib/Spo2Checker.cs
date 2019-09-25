@@ -9,24 +9,24 @@ namespace Spo2CheckerLib
 {
     public class Spo2Checker:ISpo2Checker
     {
-        public Vitals.Spo2Level CheckSpo2(int s)
+        public Vitals.Spo2Level CheckSpo2(int spo2)
         {
-            if (s >= 95 && s <= 100)
+            if (spo2 >= 95 && spo2 <= 100)
             {
                 
                 return Vitals.Spo2Level.NormalHealthy;
             }
-            else if (s >= 91 && s < 95)
+            else if (spo2 >= 91 && spo2 < 95)
             {
                 
                 return Vitals.Spo2Level.ClinicallyAcceptable;
             }
-            else if (s >= 70 && s <= 90)
+            else if (spo2 >= 70 && spo2 <= 90)
             {
                 
                 return Vitals.Spo2Level.Hypoxemia;
             }
-            else if (s >= 0 && s < 70)
+            else if (spo2 >= 0 && spo2 < 70)
             {
                 return Vitals.Spo2Level.LackOfO2;
             }

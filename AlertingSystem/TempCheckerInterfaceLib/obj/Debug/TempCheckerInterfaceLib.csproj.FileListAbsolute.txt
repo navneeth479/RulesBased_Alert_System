@@ -33,3 +33,8 @@ C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\TempCheckerIn
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\TempCheckerInterfaceLib\obj\Debug\TempCheckerInterfaceLib.csproj.CopyComplete
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\TempCheckerInterfaceLib\obj\Debug\TempCheckerInterfaceLib.dll
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\TempCheckerInterfaceLib\obj\Debug\TempCheckerInterfaceLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TempCheckerInterfaceLib\bin\Debug\EntityFramework.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TempCheckerInterfaceLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TempCheckerInterfaceLib\bin\Debug\DataModelsLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TempCheckerInterfaceLib\bin\Debug\EntityFramework.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\TempCheckerInterfaceLib\bin\Debug\EntityFramework.SqlServer.xml

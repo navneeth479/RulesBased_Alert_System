@@ -14,30 +14,7 @@ namespace ICUDBMySQLRepository
 {
     public class IcuDbMySqlRepo : IICUDBRepo
     {
-        public IcuDbMySqlRepo()
-        {
-            //SqlConnection con = new SqlConnection(@"Data Source=YY175268\SQLEXPRESS;Initial Catalog=AlarmingSystemDB;Integrated Security=True");
-            //con.Open();
-            //SqlCommand cmd1 = new SqlCommand("SELECT * FROM Beds", con);
-            //var reader = cmd1.ExecuteReader();
-            //Dictionary<int, bool> occupied = new Dictionary<int, bool>();
-
-            //while (reader.Read())
-            //{
-            //    if ((string)reader[1] == "Y")
-            //    {
-            //        occupied.Add((int)reader[0], true);
-            //    }
-            //    else
-            //    {
-            //        occupied.Add((int)reader[0], false);
-            //    }
-
-
-            //}
-
-            //ICU.BedOccupancy = occupied;
-        }
+        
         public void AdmitPatient(string id,int bedno)
         {
            
@@ -126,37 +103,62 @@ namespace ICUDBMySQLRepository
                 cmd3.ExecuteNonQuery();
             
         }
-        //----------------------------------------------------------------------------------------
+        
         public List<ICUStatu> GetPatient()
         {
             using (ICUDBEntities1 entities = new ICUDBEntities1())
             { return entities.ICUStatus.Where(e=>e.PatientStatus.ToLower()!="discharged").ToList(); }
         }
-        //----------------------------------------------------------------------------------------
 
-        public void ReadRecord(ref string id, ref int spo2, ref int pulse, ref double temp)
+        
+        
+        public List<int> GetVitals(string id)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=YY175268\SQLEXPRESS;Initial Catalog=AlarmingSystemDB;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = new SqlCommand($@"SELECT * FROM ICUSTATE WHERE PATIENTID='{id}'", con);
-            var reader = cmd.ExecuteReader();
-            reader.Read();
-             spo2 = (int)reader[1];
-             pulse = (int)reader[3];
-            id = (string)reader[0];
-            temp = (double)reader[2];
+            List<int> vitalsList = new List<int>();
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
+            {
+                var entity = entities.ICUStatus.FirstOrDefault(e => e.PatientId == id);
+                vitalsList.Add((int)entity.SPO2);
+                vitalsList.Add((int)entity.PulseRate);
+                vitalsList.Add((int)entity.Temperature);
+
+            }
+            return vitalsList;
 
 
         }
-        public void UpdateVitals(string id, Patient vitals)
+        public ICUStatu UpdateSpo2(string id, int spo2)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=AlarmingSystemDB;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd6 = new SqlCommand($@"UPDATE ICUSTATUS SET SPO2='{vitals.Spo2}',PULSERATE='{vitals.PulseRate}',TEMPERATURE='{vitals.Temperature}' WHERE PATIENTID='{id}'", con);
-            cmd6.ExecuteNonQuery();
-            con.Close();
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
+            {
+                var entity = entities.ICUStatus.FirstOrDefault(e => e.PatientId == id);
+                entity.SPO2 = spo2;
+                entities.SaveChanges();
+
+                return entity;
+            }
         }
-        //--------------------------------------------------------------------------------------------------------
+        public ICUStatu UpdatePulse(string id, int pulse)
+        {
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
+            {
+                var entity = entities.ICUStatus.FirstOrDefault(e => e.PatientId == id);
+                entity.PulseRate = pulse;
+                entities.SaveChanges();
+
+                return entity;
+            }
+        }
+        public ICUStatu UpdateTemp(string id, int temp)
+        {
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
+            {
+                var entity = entities.ICUStatus.FirstOrDefault(e => e.PatientId == id);
+                entity.Temperature = temp;
+                entities.SaveChanges();
+                return entity;
+            }
+        }
 
         public ICUStatu GetPatientBasedOnBed(int id)
         {
@@ -187,12 +189,8 @@ namespace ICUDBMySQLRepository
                 entity.bedNo = updatestatus.bedNo;
                 entity.OtherMedications = updatestatus.OtherMedications;
                 entity.PatientDob = updatestatus.PatientDob;
-
                 entities.SaveChanges();
-
                 return entity;
-
-
             }
         }
 

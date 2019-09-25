@@ -21,3 +21,9 @@ C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\DataModelsLib
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.csproj.CopyComplete
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.dll
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\DataModelsLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\EntityFramework.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\EntityFramework.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\EntityFramework.SqlServer.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.csproj.CopyComplete

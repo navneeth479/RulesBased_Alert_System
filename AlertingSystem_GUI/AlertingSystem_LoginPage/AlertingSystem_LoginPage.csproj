@@ -14,6 +14,8 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -24,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,6 +43,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
     </Reference>
@@ -71,7 +75,6 @@
     </Compile>
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\Gender.cs" />
-    <Compile Include="Models\Vitals.cs" />
     <Compile Include="ViewModels\Client.cs" />
     <Compile Include="ViewModels\DatetimeToDateConverter.cs" />
     <Compile Include="ViewModels\GenderConverter.cs" />
@@ -140,5 +143,18 @@
   <ItemGroup>
     <Resource Include="Graphics\exit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VitalSimulatorMangerLib\VitalSimulatorMangerLib.csproj">
+      <Project>{22cd1334-d302-455d-b640-9ec190069797}</Project>
+      <Name>VitalSimulatorMangerLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.Metrics.2.9.4\build\Microsoft.CodeAnalysis.Metrics.targets" Condition="Exists('..\packages\Microsoft.CodeAnalysis.Metrics.2.9.4\build\Microsoft.CodeAnalysis.Metrics.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.Metrics.2.9.4\build\Microsoft.CodeAnalysis.Metrics.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.Metrics.2.9.4\build\Microsoft.CodeAnalysis.Metrics.targets'))" />
+  </Target>
 </Project>

@@ -42,3 +42,8 @@ C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\Spo2CheckerLi
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\Spo2CheckerLib\obj\Debug\Spo2CheckerLib.csproj.CopyComplete
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\Spo2CheckerLib\obj\Debug\Spo2CheckerLib.dll
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\Spo2CheckerLib\obj\Debug\Spo2CheckerLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerLib\bin\Debug\EntityFramework.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerLib\bin\Debug\DataModelsLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerLib\bin\Debug\EntityFramework.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\Spo2CheckerLib\bin\Debug\EntityFramework.SqlServer.xml

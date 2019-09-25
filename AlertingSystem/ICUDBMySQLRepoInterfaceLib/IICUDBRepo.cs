@@ -9,15 +9,16 @@ namespace ICUDBMySQLRepoInterfaceLib
 {
     public interface IICUDBRepo
     {
-       
-        void ReadRecord(ref string id, ref int spo2, ref int pulse, ref double temp);
         void AdmitPatient(string id,int bedno);
         void DischargePatient(string id,int bedno);
         List<ICUStatu> GetPatient();
+        List<int> GetVitals(string id);
         ICUStatu GetSpecificPatient(string id);
         ICUStatu GetPatientBasedOnBed(int id);
         ICUStatu AddPatient(ICUStatu record);
-        void UpdateVitals(string id, Patient vitals);
+        ICUStatu UpdateSpo2(string id, int spo2);
+        ICUStatu UpdatePulse(string id, int pulse);
+        ICUStatu UpdateTemp(string id, int temp);
         ICUStatu UpdatePatientStatus(string id, ICUStatu updatestatus);
 
 

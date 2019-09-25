@@ -42,3 +42,8 @@ C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PulseCheckerL
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PulseCheckerLib\obj\Debug\PulseCheckerLib.csproj.CopyComplete
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PulseCheckerLib\obj\Debug\PulseCheckerLib.dll
 C:\Users\320066952\CaseStudySOLID\Phase2_RulesBased\AlertingSystem\PulseCheckerLib\obj\Debug\PulseCheckerLib.pdb
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerLib\bin\Debug\EntityFramework.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerLib\bin\Debug\DataModelsLib.dll.config
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerLib\bin\Debug\EntityFramework.xml
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\PulseCheckerLib\bin\Debug\EntityFramework.SqlServer.xml
