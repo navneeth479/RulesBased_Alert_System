@@ -9,5 +9,6 @@ namespace PulseCheckerInteraceLib
     public interface IPulseChecker
     {
         Vitals.Pulse CheckPulse(int pulse);
+        bool IsAlertPulse(int pulse);
     }
 }

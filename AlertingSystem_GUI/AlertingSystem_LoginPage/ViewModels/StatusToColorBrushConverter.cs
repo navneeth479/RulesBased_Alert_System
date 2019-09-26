@@ -21,7 +21,7 @@ namespace AlertingSystem_LoginPage.ViewModels
             switch (input)
             {
                 case "Active":
-                    return Brushes.LightGreen;
+                    return Brushes.Green;  
                 case "Alert":
                     return Brushes.Red;
                 case "Admitted":

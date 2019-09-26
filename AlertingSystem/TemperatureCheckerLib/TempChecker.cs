@@ -9,7 +9,7 @@ namespace TemperatureCheckerLib
 {
     public class TempChecker : ITempChecker
     {
-        public Vitals.Temp CheckTemp(double temp)
+        public Vitals.Temp CheckTemp(int temp)
         {
             {
                 if (temp>= 89 && temp<= 91)
@@ -45,6 +45,16 @@ namespace TemperatureCheckerLib
                     return Vitals.Temp.InvalidInput;
                 }
             }
+        }
+
+        public bool IsAlertTemp(int temp)
+        {
+            if (temp > 100 || temp < 92)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

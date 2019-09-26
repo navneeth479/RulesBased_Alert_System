@@ -238,7 +238,7 @@ namespace AlertingSystem_LoginPage.ViewModels
             {
                 if (_resetAlarmCommand == null)
                 {
-                    _resetAlarmCommand = new RelayCommand(param => this.ResetAlarm(param),
+                    _resetAlarmCommand = new RelayCommand(param => this.ResetAlarm(),
                         null);
                 }
                 return _resetAlarmCommand;
@@ -311,10 +311,11 @@ namespace AlertingSystem_LoginPage.ViewModels
         {
             var patient = param as Patient;
             patient.PatientStatus = "Discharged";
-            patient.BedNum = 0;
+            patient.bedNo = 0;
             Patients.Remove(patient);
             clt.UpdatePatient(patient.PatientId, patient);
             NotifyPropertyChanged("SelectedPatient");
+            NotifyBeds();
 
         }
         
@@ -331,26 +332,40 @@ namespace AlertingSystem_LoginPage.ViewModels
             List<int> vitalsList;
             for (int i = 0; i < 100; i++)
             {
+                
                 vitalsList = clt.GetVitals(id);
                 conditionList = clt.GetPatientCondition(id);
+                p.PatientStatus = clt.GetPatient(id).PatientStatus;
                 p.SPO2 = vitalsList[0];
                 p.PulseRate = vitalsList[1];
                 p.Temperature = vitalsList[2];
                 p.SPO2Status = conditionList[0];
                 p.PulseRateStatus = conditionList[1];
                 p.TemperatureStatus = conditionList[2];
-                Thread.Sleep(5000);
-            }
+                p.SPO2List.Add(vitalsList[0]);
+                p.PulseList.Add(vitalsList[1]);
+                p.TempList.Add(vitalsList[2]);
+                p.TimeList.Add(DateTime.Now);
+                NotifyPropertyChanged("SelectedPatient");
+                Thread.Sleep(2000);
+                }
         }
 
         private void StartExam(object param)
         {
-            
+            SPO2Data = new ObservableCollection<int>();
+            PulseData = new ObservableCollection<int>();
+            TempData = new ObservableCollection<int>();
+            TimeData = new ObservableCollection<DateTime>();
+            PulseData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
+            TempData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
+            PulseData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
+            TimeData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
             _patient = param as Patient;
             BackgroundWorker worker = new BackgroundWorker();
             worker.DoWork += (obj, e) => VitalSimulator(_patient);
-            
             worker.RunWorkerAsync();
+            NotifyBeds();
         }
 
         
@@ -361,14 +376,7 @@ namespace AlertingSystem_LoginPage.ViewModels
             Patients=new ObservableCollection<Patient>();
             Patients.CollectionChanged +=new NotifyCollectionChangedEventHandler(Patients_CollectionChanged);
             _patients = clt.GetAllPatients();
-            SPO2Data = new ObservableCollection<int>();
-            PulseData = new ObservableCollection<int>();
-            TempData = new ObservableCollection<int>();
-            TimeData = new ObservableCollection<DateTime>();
-            PulseData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
-            TempData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
-            PulseData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
-            TimeData.CollectionChanged += new NotifyCollectionChangedEventHandler(Data_CollectionChanged);
+            
 
             
 
@@ -384,6 +392,22 @@ namespace AlertingSystem_LoginPage.ViewModels
             NotifyPropertyChanged("Patients");
         }
 
+        private void NotifyBeds()
+        {
+            NotifyPropertyChanged("BedNo1");
+            NotifyPropertyChanged("BedNo2");
+            NotifyPropertyChanged("BedNo3");
+            NotifyPropertyChanged("BedNo4");
+            NotifyPropertyChanged("BedNo5");
+            NotifyPropertyChanged("BedNo6");
+            NotifyPropertyChanged("BedNo7");
+            NotifyPropertyChanged("BedNo8");
+            NotifyPropertyChanged("BedNo9");
+            NotifyPropertyChanged("BedNo10");
+            NotifyPropertyChanged("BedNo11");
+            NotifyPropertyChanged("BedNo12");
+
+        }
         private void Submit()
         {
             Patient.PatientStatus = "Admitted";
@@ -393,16 +417,22 @@ namespace AlertingSystem_LoginPage.ViewModels
             clt.RegisterPatient(Patient);
             Patients.Insert(0, clt.GetPatient(Patient.PatientId));
             Patient =new Patient();
+            NotifyBeds();
+
         }
-        private void ResetAlarm(object param)
+        private void ResetAlarm()
         {
-            _patient = param as Patient;
-            _patient.PatientStatus = "Active";
+            string id = SelectedPatient.PatientId;
+            SelectedPatient.PatientStatus = "Active";
+            clt.UpdatePatient(id,SelectedPatient);
+            SelectedPatient.PatientStatus = clt.GetPatient(id).PatientStatus;
+            NotifyBeds();
         }
 
         private void Reset()
         {
             Patient = new Patient();
+            NotifyPropertyChanged("Patient");
         }
 
         private void CloseWindow()

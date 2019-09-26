@@ -162,7 +162,7 @@
                                         <TextBlock Foreground="#c9c7c7" Text="{Binding LastName}" TextAlignment="Center" FontSize="25" FontWeight="Heavy"></TextBlock>
 
                                         <TextBlock Text="{Binding PatientId}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Padding="5"/>
-                                        <TextBlock Text="{Binding BedNum}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
+                                        <TextBlock Text="{Binding bedNo}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
                                         <Ellipse HorizontalAlignment="Right" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White,Mode=TwoWay}" Width="10" Height="10"/>
                                     </StackPanel>
                                 </Border>
@@ -252,7 +252,7 @@
                         <Label Grid.Column="3" Grid.Row="5">Other Medications</Label>
                         <TextBox Grid.Column="4" Grid.Row="1" Text="{Binding Patient.DoctorAssigned,Mode=TwoWay}" Validation.ErrorTemplate="{StaticResource validationTemplate}"/>
                         <TextBox Grid.Column="4" Grid.Row="2" Text="{Binding Patient.ReasonAdmitted,Mode=TwoWay}"/>
-                        <TextBox Grid.Column="4" Grid.Row="3" Text="{Binding Path=Patient.BedNum,Mode=TwoWay}" Validation.ErrorTemplate="{StaticResource validationTemplate}"/>
+                        <TextBox Grid.Column="4" Grid.Row="3" Text="{Binding Path=Patient.bedNo,Mode=TwoWay}" Validation.ErrorTemplate="{StaticResource validationTemplate}"/>
                         <DatePicker Foreground="#424242" Margin="8" Grid.Column="4" Grid.Row="4" HorizontalAlignment="Stretch"  Name="DatepickerAdmission" VerticalAlignment="Top" Text="{Binding Patient.AdmissionDate,Mode=TwoWay}"/>
                         <TextBox Grid.Column="4" Grid.Row="5" Grid.RowSpan="2" Height="70" VerticalAlignment="Top" Text="{Binding Patient.OtherMedications,Mode=TwoWay}"/>
                     </Grid>
@@ -280,7 +280,7 @@
                                         <TextBlock Foreground="#c9c7c7" Text="{Binding LastName,Mode=TwoWay}" TextAlignment="Center" FontSize="25" FontWeight="Heavy"></TextBlock>
 
                                         <TextBlock Text="{Binding PatientId,Mode=TwoWay}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Padding="5"/>
-                                        <TextBlock Text="{Binding BedNum,Mode=TwoWay}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
+                                        <TextBlock Text="{Binding bedNo,Mode=TwoWay}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
                                         <Ellipse HorizontalAlignment="Right" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White,Mode=TwoWay}" Width="10" Height="10"/>
                                     </StackPanel>
                                 </Border>
@@ -349,7 +349,7 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Foreground="#c9c7c7" TextAlignment="Left" Text="ICU Bed Alloted :" FontSize="20" Padding="10" />
-                                <TextBlock Padding="10" Grid.Column="1"  Foreground="#c9c7c7" TextAlignment="Left" Text="{Binding BedNum,FallbackValue=BedNum,Mode=TwoWay}" FontSize="20" />
+                                <TextBlock Padding="10" Grid.Column="1"  Foreground="#c9c7c7" TextAlignment="Left" Text="{Binding bedNo,FallbackValue=BedNum,Mode=TwoWay}" FontSize="20" />
                             </Grid>
                             <Line
                                 X1="20" Y1="30"
@@ -413,7 +413,7 @@
                         
                         <Border Grid.Row="0" Height="210" Width="500"  VerticalAlignment="Top" Margin="10" BorderThickness="4" BorderBrush="#c9c7c7">
                             <StackPanel>
-                                <TextBlock Padding="15,5,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Left" Text="Current Vitals :" FontSize="30" MaxHeight="100" />
+                                <TextBlock Padding="15,5,0,0" Grid.Column="1" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Text="Current Vitals" FontSize="20" MaxHeight="100" />
                                 <Grid HorizontalAlignment="Stretch" Margin="10,0,0,0" DataContext="{Binding Source={StaticResource ViewModel}}">
                                     <Grid.ColumnDefinitions>
 
@@ -461,8 +461,8 @@
                                                 <TextBlock Width="146" Height="25" Text="Temperature" HorizontalAlignment="Right" TextAlignment="Center" FontSize="17"/>
                                             </TabItem.Header>
                                             <Grid Background="#2e2e2e">
-                                            <DVC:Chart Width="500" Height="250"  Name="tempChart" Title="Temperature Graph" DataContext="{Binding Source={StaticResource ViewModel}}">
-                                                    <DVC:LineSeries ItemsSource="{Binding Source={StaticResource ViewModel}}" Title="Temperature" DependentValueBinding="{Binding SPO2Data,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True}" IndependentValueBinding="{Binding TimeData,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True}"/>
+                                            <DVC:Chart Width="500" Height="250"  Name="tempChart" Foreground="White" Title="Temperature Graph" DataContext="{Binding Source={StaticResource ViewModel}}">
+                                                    <DVC:LineSeries ItemsSource="{Binding Source={StaticResource ViewModel}}" Title="Temperature" DependentValueBinding="{Binding SelectedPatient.SPO2List,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True}" IndependentValueBinding="{Binding SelectedPatient.TimeList,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True}"/>
                                                 </DVC:Chart>
                                             </Grid>
                                         </TabItem>
@@ -517,7 +517,7 @@
                 </TabItem.Header>
 
                 <StackPanel Background="#1f1f1f" DataContext="{Binding Source={StaticResource ViewModel}}">
-                    <ListView Name="PatientList2" Height="160" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedItem="{Binding SelectedPatient,Mode=TwoWay}" SelectedIndex="0">
+                    <ListView Name="PatientList2" Height="160" VerticalAlignment="Top" Background="#2e2e2e" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding Patients,Mode=TwoWay}" SelectedIndex="0">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Background="Transparent" Orientation="Horizontal" />
@@ -531,7 +531,7 @@
                                         <TextBlock Foreground="#c9c7c7" Text="{Binding LastName,Mode=TwoWay}" TextAlignment="Center" FontSize="25" FontWeight="Heavy"></TextBlock>
 
                                         <TextBlock Text="{Binding PatientId,Mode=TwoWay}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Padding="5"/>
-                                        <TextBlock Text="{Binding BedNum,Mode=TwoWay}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
+                                        <TextBlock Text="{Binding bedNo,Mode=TwoWay}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
                                         <Ellipse HorizontalAlignment="Right" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White,Mode=TwoWay}" Width="10" Height="10"/>
                                     </StackPanel>
                                 </Border>
@@ -595,7 +595,7 @@
                                             <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding PulseRate,FallbackValue='NA' }"/>
                                             <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left" Content="{Binding Temperature,FallbackValue=NA}"/>
                                         </Grid>
-                                        <Button Width="60" Height="20" Margin="0,10,0,0" Cursor="Hand" Command="{Binding ResetCommand}">Reset</Button>
+                                        <Button Width="60" Height="20" Margin="0,10,0,0" Cursor="Hand" Command="{Binding ResetAlarmCommand}">Reset</Button>
                                     </StackPanel>
                                 </Grid>
 
@@ -978,11 +978,11 @@
                                             <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">SPO2 :</Label>
                                             <Label Grid.Column="0" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Pulse :</Label>
                                             <Label Grid.Column="0" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Left">Temp :</Label>
-                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" Content="{Binding SPO2,FallbackValue=NA }"/>
-                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" Content="{Binding PulseRate,FallbackValue='NA' }"/>
-                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" Content="{Binding Temperature,FallbackValue=NA}"/>
+                                            <Label Grid.Column="1" Grid.Row="0" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" Content="{Binding SeLectedPatient.SPO2,FallbackValue=NA }"/>
+                                            <Label Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" Content="{Binding SelectedPatient.PulseRate,FallbackValue='NA' }"/>
+                                            <Label Grid.Column="1" Grid.Row="2" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" Content="{Binding SelectedPatient.Temperature,FallbackValue=NA}"/>
                                         </Grid>
-                                        <Button Width="60" Height="20" Margin="0,10,0,0" Cursor="Hand" Command="{Binding ResetCommand,Mode=TwoWay}" CommandParameter="{Binding BedNo7,Mode=TwoWay}">Reset</Button>
+                                        <Button Width="60" Height="20" Margin="0,10,0,0" Cursor="Hand" Command="{Binding ResetAlarmCommand,Source={StaticResource ViewModel}}">Reset</Button>
                                     </StackPanel>
                                 </Grid>
                             </Grid>
@@ -1348,7 +1348,7 @@
                                         <TextBlock Foreground="#c9c7c7" Text="{Binding LastName}" TextAlignment="Center" FontSize="25" FontWeight="Heavy"></TextBlock>
 
                                         <TextBlock Text="{Binding PatientId}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center" Padding="5"/>
-                                        <TextBlock Text="{Binding BedNum}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
+                                        <TextBlock Text="{Binding bedNo}" FontWeight="Bold" Foreground="#c9c7c7" TextAlignment="Center"></TextBlock>
                                         <Ellipse HorizontalAlignment="Right" Fill="{Binding PatientStatus,Converter={StaticResource StatusConverter},FallbackValue=White}" Width="10" Height="10"/>
                                     </StackPanel>
                                 </Border>

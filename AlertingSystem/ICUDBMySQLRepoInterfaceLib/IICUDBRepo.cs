@@ -20,6 +20,11 @@ namespace ICUDBMySQLRepoInterfaceLib
         ICUStatu UpdatePulse(string id, int pulse);
         ICUStatu UpdateTemp(string id, int temp);
         ICUStatu UpdatePatientStatus(string id, ICUStatu updatestatus);
+        string GetSPO2Description(int spo2);
+        string GetPulseDescription(int pulse);
+        string GetTempDescription(int temp);
+        void AlertStatus(string id);
+
 
 
     }

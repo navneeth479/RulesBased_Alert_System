@@ -5,7 +5,6 @@ C:\Users\320050487\source\repos\CaseStudyPart2\DataModelsLib\obj\Debug\DataModel
 C:\Users\320050487\source\repos\CaseStudyPart2\DataModelsLib\obj\Debug\DataModelsLib.pdb
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\DataModelsLib.dll
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\DataModelsLib.pdb
-C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.csprojAssemblyReference.cache
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.csproj.CoreCompileInputs.cache
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.dll
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.pdb

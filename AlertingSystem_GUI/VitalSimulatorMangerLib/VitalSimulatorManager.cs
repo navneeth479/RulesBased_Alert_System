@@ -16,7 +16,7 @@ namespace VitalSimulatorMangerLib
             for (int i = 0; i < 100; i++)
             {
                 _obj.UpdateVitals(patientid,_obj.SimulateVitals());
-                Thread.Sleep(5000);
+                Thread.Sleep(2000);
             }
         }
     }

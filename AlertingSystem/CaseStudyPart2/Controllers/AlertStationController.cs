@@ -19,7 +19,7 @@ namespace CaseStudyPart2.Controllers
         ISpo2Checker _spo2Checker;
         IPulseChecker _pulseChecker;
         ITempChecker _tempChecker;
-        ICUDBMySQLRepoInterfaceLib.IICUDBRepo _db;
+        ICUDBMySQLRepoInterfaceLib.IICUDBRepo _icu;
         readonly UnityContainer _con = new UnityContainer();
         public AlertStationController()
         {
@@ -28,8 +28,7 @@ namespace CaseStudyPart2.Controllers
             _con.RegisterType<ITempChecker, TempChecker>();
             _con.RegisterType<ICUDBMySQLRepoInterfaceLib.IICUDBRepo, ICUDBMySQLRepository.IcuDbMySqlRepo>();
         }
-        public static Dictionary<string, List<string>> res = new Dictionary<string, List<string>>();
-        public static int cnt = 1;
+        
         
         [Route("api/PatientCondition/{id}")]
         [HttpGet]
@@ -38,55 +37,35 @@ namespace CaseStudyPart2.Controllers
             _pulseChecker = _con.Resolve<IPulseChecker>();
             _spo2Checker = _con.Resolve<ISpo2Checker>();
             _tempChecker = _con.Resolve<ITempChecker>();
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
             List<string> localList = new List<string>();
             List<int> vitalsList;
-            
             int spo2 , pulseRate,temp;
-            string patientId = id;
-            vitalsList=_db.GetVitals(patientId);
+            vitalsList=_icu.GetVitals(id);
             spo2 = vitalsList[0];
             pulseRate = vitalsList[1];
             temp = vitalsList[2];
+            if (_spo2Checker.IsAlertSpo2(spo2))
+            {
+                _icu.AlertStatus(id);
+            }
 
+            if (_pulseChecker.IsAlertPulse(pulseRate))
+            {
+                _icu.AlertStatus(id);
+            }
 
-            Dictionary<int, string> spo2Dictionary = new Dictionary<int, string>();
-            spo2Dictionary.Add(1, "Normal healthy individual");
-            spo2Dictionary.Add(2, "Clinically acceptable but low");
-            spo2Dictionary.Add(3, "Hypoxemia. Unhealthy and unsafe level");
-            spo2Dictionary.Add(4, "Extreme lack of oxygen");
-            spo2Dictionary.Add(5, "Invalid Input");
-
-            Dictionary<int, string> pulseDictionary = new Dictionary<int, string>();
-            pulseDictionary.Add(1, "Below healthy resting heart rate");
-            pulseDictionary.Add(2, "Resting heartrate for sleeping");
-            pulseDictionary.Add(3, "Healthy adult resting heart rate");
-            pulseDictionary.Add(4, "High heart rate");
-            pulseDictionary.Add(5, "Emergency, Abnormally high heart rate");
-            pulseDictionary.Add(6, "Invalid Input");
-
-            Dictionary<int, string> tempDictionary = new Dictionary<int, string>();
-            tempDictionary.Add(1, "Medical Emergency");
-            tempDictionary.Add(2, "Sleepiness, Depressed, Confused");
-            tempDictionary.Add(3, "Loss of moment of fingers, blueness and confusion");
-            tempDictionary.Add(4, "Hypothermia");
-            tempDictionary.Add(5, "Cold");
-            tempDictionary.Add(6, "Normal body temperature");
-            tempDictionary.Add(7, "Unhealthy and high fever");
-            tempDictionary.Add(8, "Invalid Input");
-
-            localList.Add(spo2Dictionary[(int)_spo2Checker.CheckSpo2(spo2)]);
-            localList.Add(pulseDictionary[(int)_pulseChecker.CheckPulse(pulseRate)]);
-            localList.Add(tempDictionary[(int)_tempChecker.CheckTemp(temp)]);
-            res[id] = localList;
+            if (_tempChecker.IsAlertTemp(temp))
+            {
+                _icu.AlertStatus(id);
+            }
+            localList.Add(_icu.GetSPO2Description((int)_spo2Checker.CheckSpo2(spo2)));
+            localList.Add(_icu.GetPulseDescription((int)_pulseChecker.CheckPulse(pulseRate)));
+            localList.Add(_icu.GetTempDescription((int)_tempChecker.CheckTemp(temp)));
+            
             return localList;
         }
 
-        [Route("api/AlarmShutter/{id}")]
-        [HttpGet]
-        public void TurnOffAlarm(string id)
-        {
-            res[id].Clear();
-        }
+        
     }
 }

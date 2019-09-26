@@ -17,12 +17,15 @@ namespace AlertingSystem_LoginPage.ViewModels
 {
     public class Client
     {
-        
+        private readonly string remoteurl = "http://161.85.95.38:56294/";
+        private readonly string localurl = "http://localhost:56294/";
+
+
 
         public ObservableCollection<Patient> GetAllPatients()
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/");
+            client.BaseAddress = new Uri(localurl);
             
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -36,7 +39,7 @@ namespace AlertingSystem_LoginPage.ViewModels
         public Patient GetPatientBasedOnBed(int bed)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/GetPatientBasedOnBed/");
+            client.BaseAddress = new Uri(localurl+"api/NurseStation/GetPatientBasedOnBed/");
 
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -50,7 +53,7 @@ namespace AlertingSystem_LoginPage.ViewModels
         public Patient GetPatient(string id)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/GetSpecificPatient/");
+            client.BaseAddress = new Uri(localurl+"api/NurseStation/GetSpecificPatient/");
 
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -64,7 +67,7 @@ namespace AlertingSystem_LoginPage.ViewModels
         public List<int> GetVitals(string id)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/Getvitals/");
+            client.BaseAddress = new Uri(localurl+"api/NurseStation/Getvitals/");
 
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -78,7 +81,7 @@ namespace AlertingSystem_LoginPage.ViewModels
         public void RegisterPatient(Patient patient)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/");
+            client.BaseAddress = new Uri(localurl);
             var myContent = JsonConvert.SerializeObject(patient);
             var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
             var byteContent = new ByteArrayContent(buffer);
@@ -94,7 +97,7 @@ namespace AlertingSystem_LoginPage.ViewModels
         public void UpdatePatient(string id, Patient patient)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/UpdatePatientRecord/");
+            client.BaseAddress = new Uri(localurl+"api/NurseStation/UpdatePatientRecord/");
             var myContent = JsonConvert.SerializeObject(patient);
             var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
             var byteContent = new ByteArrayContent(buffer);
@@ -110,7 +113,7 @@ namespace AlertingSystem_LoginPage.ViewModels
         public List<string> GetPatientCondition(string id)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/api/PatientCondition/");
+            client.BaseAddress = new Uri(localurl+"api/PatientCondition/");
 
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));

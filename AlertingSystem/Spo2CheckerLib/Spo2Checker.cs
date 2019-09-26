@@ -36,5 +36,15 @@ namespace Spo2CheckerLib
                 return Vitals.Spo2Level.InvalidInput;
             }
         }
+
+        public bool IsAlertSpo2(int spo2)
+        {
+            if (spo2 < 70)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

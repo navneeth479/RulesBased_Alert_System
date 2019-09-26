@@ -204,6 +204,55 @@ namespace ICUDBMySQLRepository
 
             }
         }
+
+        public string GetSPO2Description(int spo2)
+        {
+            Dictionary<int, string> spo2Dictionary = new Dictionary<int, string>();
+            spo2Dictionary.Add(1, "Normal healthy individual");
+            spo2Dictionary.Add(2, "Clinically acceptable but low");
+            spo2Dictionary.Add(3, "Unhealthy and unsafe level");
+            spo2Dictionary.Add(4, "Extreme lack of oxygen");
+            spo2Dictionary.Add(5, "Invalid Input");
+            return (spo2Dictionary[spo2]);
+        }
+
+        public string GetPulseDescription(int pulse)
+        {
+            Dictionary<int, string> pulseDictionary = new Dictionary<int, string>();
+            pulseDictionary.Add(1, "Below healthy resting heart rate");
+            pulseDictionary.Add(2, "Resting heartrate for sleeping");
+            pulseDictionary.Add(3, "Healthy adult resting heart rate");
+            pulseDictionary.Add(4, "High heart rate");
+            pulseDictionary.Add(5, "Emergency, Abnormally high heart rate");
+            pulseDictionary.Add(6, "Invalid Input");
+            return pulseDictionary[pulse];
+        }
+
+        public string GetTempDescription(int temp)
+        {
+            Dictionary<int, string> tempDictionary = new Dictionary<int, string>();
+            tempDictionary.Add(1, "Medical Emergency");
+            tempDictionary.Add(2, "Sleepiness, Depressed, Confused");
+            tempDictionary.Add(3, "Loss of Moment");
+            tempDictionary.Add(4, "Hypothermia");
+            tempDictionary.Add(5, "Cold");
+            tempDictionary.Add(6, "Normal body temperature");
+            tempDictionary.Add(7, "Unhealthy and high fever");
+            tempDictionary.Add(8, "Invalid Input");
+            return tempDictionary[temp];
+        }
+
+        public void AlertStatus(string id)
+        {
+            using (ICUDBEntities1 entities = new ICUDBEntities1())
+            {
+                var entity = entities.ICUStatus.FirstOrDefault(e => e.PatientId.ToLower() == id.ToLower());
+                entity.PatientStatus = "Alert";
+                entities.SaveChanges();
+            }
+        }
+
+
         public ICUStatu GetSpecificPatient(string id)
         {
 

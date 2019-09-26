@@ -8,7 +8,8 @@ namespace TempCheckerInterfaceLib
 {
     public interface ITempChecker
     {
-        Vitals.Temp CheckTemp(double temp);
-        
+        Vitals.Temp CheckTemp(int temp);
+        bool IsAlertTemp(int temp);
+
     }
 }

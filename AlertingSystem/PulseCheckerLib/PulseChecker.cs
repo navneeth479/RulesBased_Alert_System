@@ -36,5 +36,16 @@ namespace PulseCheckerLib
 
             return Vitals.Pulse.InvalidInput;
         }
+
+        public bool IsAlertPulse(int pulse)
+        {
+            if (pulse < 40 || pulse>220)
+            {
+                return true;
+            }
+            return false;
+        }
     }
+
+    
 }

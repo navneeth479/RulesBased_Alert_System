@@ -13,11 +13,13 @@ namespace ICUSimulatorLib
 {
     public class ICUSimulatorClient
     {
+        private readonly string localurl = "http://localhost:56294/";
+
 
         public void UpdateSpo2(string id, int spo2)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/spo2/");
+            client.BaseAddress = new Uri(localurl+"api/NurseStation/spo2/");
             var myContent = JsonConvert.SerializeObject(spo2);
             var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
             var byteContent = new ByteArrayContent(buffer);
@@ -32,7 +34,7 @@ namespace ICUSimulatorLib
         public void UpdatePulse(string id, int pulse)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/pulse/");
+            client.BaseAddress = new Uri(localurl+"api/NurseStation/pulse/");
             var myContent = JsonConvert.SerializeObject(pulse);
             var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
             var byteContent = new ByteArrayContent(buffer);
@@ -47,7 +49,7 @@ namespace ICUSimulatorLib
         public void UpdateTemp(string id, int temp)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:56294/api/NurseStation/tempt/");
+            client.BaseAddress = new Uri(localurl+"api/NurseStation/tempt/");
             var myContent = JsonConvert.SerializeObject(temp);
             var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
             var byteContent = new ByteArrayContent(buffer);

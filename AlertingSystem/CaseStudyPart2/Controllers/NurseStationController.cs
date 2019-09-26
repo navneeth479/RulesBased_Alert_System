@@ -19,7 +19,7 @@ namespace CaseStudyPart2.Controllers
     public class NurseStationController : ApiController
     {
         
-        ICUDBMySQLRepoInterfaceLib.IICUDBRepo _db;
+        ICUDBMySQLRepoInterfaceLib.IICUDBRepo _icu;
         UnityContainer _con = new UnityContainer();
         public NurseStationController()
         {
@@ -29,32 +29,15 @@ namespace CaseStudyPart2.Controllers
             _con.RegisterType<ICUDBMySQLRepoInterfaceLib.IICUDBRepo, ICUDBMySQLRepository.IcuDbMySqlRepo>();
         }
 
-        
-        [Route("api/PatientAdmitter/{id}/{bedno}")]
-        [HttpGet]
-        public void AdmitPatient(string id,int bedno)
-        {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
-            _db.AdmitPatient(id,bedno);
-        }
-        [Route("api/PatientDischarger/{id}/{bedno}")]
-        [HttpGet]
-        public void DischargePatient(string id,int bedno)
-        { 
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
-            
-            _db.DischargePatient(id,bedno);
-        }
-
         [Route("api/NurseStation/GetPatient")]
         [HttpGet]
         public HttpResponseMessage GetPatient()
         {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
 
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _db.GetPatient());
+                return Request.CreateResponse(HttpStatusCode.OK, _icu.GetPatient());
             }
 
 
@@ -67,11 +50,11 @@ namespace CaseStudyPart2.Controllers
         [HttpGet]
         public HttpResponseMessage GetSpecificPatient(string id)
         {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
 
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _db.GetSpecificPatient(id));
+                return Request.CreateResponse(HttpStatusCode.OK, _icu.GetSpecificPatient(id));
             }
 
 
@@ -84,11 +67,11 @@ namespace CaseStudyPart2.Controllers
         [HttpGet]
         public HttpResponseMessage GetPatientBasedOnBed(int id)
         {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
 
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _db.GetPatientBasedOnBed(id));
+                return Request.CreateResponse(HttpStatusCode.OK, _icu.GetPatientBasedOnBed(id));
             }
 
 
@@ -101,11 +84,11 @@ namespace CaseStudyPart2.Controllers
         [HttpGet]
         public HttpResponseMessage GetVitals(string id)
         {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
 
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, _db.GetVitals(id));
+                return Request.CreateResponse(HttpStatusCode.OK, _icu.GetVitals(id));
             }
 
 
@@ -118,8 +101,8 @@ namespace CaseStudyPart2.Controllers
         [HttpPut]
         public HttpResponseMessage Put(string id, [FromBody] ICUStatu patientstatus)
         {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
-            var entity = _db.UpdatePatientStatus(id, patientstatus);
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            var entity = _icu.UpdatePatientStatus(id, patientstatus);
 
             if (entity == null)
             { return Request.CreateErrorResponse(HttpStatusCode.NotFound, "patient with id" + id + "Is not found"); }
@@ -137,9 +120,9 @@ namespace CaseStudyPart2.Controllers
         public HttpResponseMessage Post([FromBody] ICUStatu registerpatient)
 
         {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
 
-            var entity = _db.AddPatient(registerpatient);
+            var entity = _icu.AddPatient(registerpatient);
 
             if (entity == null)
             {
@@ -157,9 +140,10 @@ namespace CaseStudyPart2.Controllers
         [HttpPut]
         public HttpResponseMessage UpdateSpo2(string id,[FromBody] int spo2)
         {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
 
-            var entity= _db.UpdateSpo2(id, spo2);
+            var entity= _icu.UpdateSpo2(id, spo2);
+            
 
             if (entity == null)
             { return Request.CreateErrorResponse(HttpStatusCode.NotFound, "patient with id" + id + "Is not found"); }
@@ -174,9 +158,9 @@ namespace CaseStudyPart2.Controllers
         [HttpPut]
         public HttpResponseMessage UpdatePulse(string id,[FromBody] int pulse)
         {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
 
-            var entity= _db.UpdatePulse(id, pulse);
+            var entity= _icu.UpdatePulse(id, pulse);
             if (entity == null)
             { return Request.CreateErrorResponse(HttpStatusCode.NotFound, "patient with id" + id + "Is not found"); }
 
@@ -190,9 +174,9 @@ namespace CaseStudyPart2.Controllers
         [HttpPut]
         public HttpResponseMessage UpdateTemp(string id,[FromBody] int temp)
         {
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _icu = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
 
-            var entity=_db.UpdateTemp(id, temp);
+            var entity=_icu.UpdateTemp(id, temp);
             if (entity == null)
             { return Request.CreateErrorResponse(HttpStatusCode.NotFound, "patient with id" + id + "Is not found"); }
 

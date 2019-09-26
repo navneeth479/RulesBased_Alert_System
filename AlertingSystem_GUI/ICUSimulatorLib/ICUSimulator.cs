@@ -14,9 +14,9 @@ namespace ICUSimulatorLib
             List<int> vitalsList=new List<int>();
             int pulse, spo2, temp;
             Random rnd = new Random();
-            pulse = rnd.Next(0, 100);
-            spo2 = rnd.Next(0, 250);
-            temp = rnd.Next(85, 120);
+            pulse = rnd.Next(0, 250);
+            spo2 = rnd.Next(0, 100);
+            temp = rnd.Next(89, 120);
             vitalsList.Add(spo2);
             vitalsList.Add(pulse);
             vitalsList.Add(temp);
