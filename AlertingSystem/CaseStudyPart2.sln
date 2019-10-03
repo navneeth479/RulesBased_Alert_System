@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29009.5
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyPart2", "CaseStudyPart2\CaseStudyPart2.csproj", "{C38FE19C-9C6B-4C7E-9B2D-7D3F0F7C0085}"
 EndProject
@@ -23,16 +23,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICUDBMySQLRepository", "ICU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICUDBMySQLRepoInterfaceLib", "ICUDBMySQLRepoInterfaceLib\ICUDBMySQLRepoInterfaceLib.csproj", "{D7F02270-3B64-410D-85E4-DC7D9471D5C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseStudyPart2.Tests", "CaseStudyPart2.Tests\CaseStudyPart2.Tests.csproj", "{3BA46E27-AC84-4446-ACF4-FA327BCD7998}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientMonitoringWebService.Tests", "PatientMonitoringWebService.Tests\PatientMonitoringWebService.Tests.csproj", "{696171E6-97A2-42BF-B1F7-49520F3442D8}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{51685EFC-785B-40CB-A5CB-ECD4A783EBDF}"
 	ProjectSection(SolutionItems) = preProject
 		PatientData.json = PatientData.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientsDBAccess", "PatientsDBAccess\PatientsDBAccess.csproj", "{B374CEDC-A1A7-4C33-AEC2-31072B750187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICUDBMySqlRepoTestsLib", "ICUDBMySqlRepoTestsLib\ICUDBMySqlRepoTestsLib.csproj", "{F896224C-2FA0-40FA-8B34-69D4C1D031DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,18 +78,14 @@ Global
 		{D7F02270-3B64-410D-85E4-DC7D9471D5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7F02270-3B64-410D-85E4-DC7D9471D5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7F02270-3B64-410D-85E4-DC7D9471D5C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BA46E27-AC84-4446-ACF4-FA327BCD7998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BA46E27-AC84-4446-ACF4-FA327BCD7998}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BA46E27-AC84-4446-ACF4-FA327BCD7998}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BA46E27-AC84-4446-ACF4-FA327BCD7998}.Release|Any CPU.Build.0 = Release|Any CPU
-		{696171E6-97A2-42BF-B1F7-49520F3442D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{696171E6-97A2-42BF-B1F7-49520F3442D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{696171E6-97A2-42BF-B1F7-49520F3442D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{696171E6-97A2-42BF-B1F7-49520F3442D8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B374CEDC-A1A7-4C33-AEC2-31072B750187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B374CEDC-A1A7-4C33-AEC2-31072B750187}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B374CEDC-A1A7-4C33-AEC2-31072B750187}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B374CEDC-A1A7-4C33-AEC2-31072B750187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F896224C-2FA0-40FA-8B34-69D4C1D031DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F896224C-2FA0-40FA-8B34-69D4C1D031DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F896224C-2FA0-40FA-8B34-69D4C1D031DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F896224C-2FA0-40FA-8B34-69D4C1D031DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

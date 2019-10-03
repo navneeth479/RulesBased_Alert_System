@@ -26,3 +26,4 @@ C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\EntityFrame
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\EntityFramework.xml
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\bin\Debug\EntityFramework.SqlServer.xml
 C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.csproj.CopyComplete
+C:\Bootcamp\Phase2_RulesBased\AlertingSystem\DataModelsLib\obj\Debug\DataModelsLib.csprojAssemblyReference.cache
