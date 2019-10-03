@@ -1,5 +1,5 @@
-# CaseStudySOLID
- Rule Based Alerting System is a Web application that provides services for the patients in the ICU.
+# Rules Based Alerting System
+ Rule Based Alerting System is a Web application that provides all the relevant services for the patients in the ICU.
  
  ## WorkFlow
  This Application has the following features: 
@@ -19,6 +19,6 @@
  After all the process, once the patient is free to be discharged, User can be able to enter the patient ID ( or choose from the top panel examcards) and click discharge to discharge the patient from the ICU. The bed which was allocated to that patient will turn gray and it the status becomes "Vacant".
  
  
- For more details, refer the CaseStudy2API.docx
-=======
+### For more details, refer the CaseStudy2API.docx
+
 
