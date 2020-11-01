@@ -1,5 +1,5 @@
 # Rules Based Alerting System
- Rule Based Alerting System is a Web application that provides all the relevant services for the patients in the ICU.
+ Rule Based Alerting System is a desktop application that provides all the relevant services for hospital staff to remotely monitor all patients and their vitals in the ICU.
  
  ## WorkFlow
  This Application has the following features: 
